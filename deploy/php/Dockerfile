@@ -1,0 +1,28 @@
+FROM php:8.1-apache as client_php
+
+ENV \
+    COMPOSER_ALLOW_SUPERUSER=1 \
+    COMPOSER_MEMORY_LIMIT=-1
+
+
+RUN apt-get update \
+    && apt-get install -y libfreetype6-dev libjpeg62-turbo-dev libpng-dev wget git libzip-dev unzip python sudo default-mysql-client
+
+RUN  docker-php-ext-configure gd --with-freetype=/usr/include/ --with-jpeg=/usr/include/ \
+     && docker-php-ext-install gd \
+     && :\
+     && docker-php-ext-install pdo pdo_mysql opcache zip \
+     && docker-php-ext-enable pdo pdo_mysql opcache zip \
+     && docker-php-ext-install bcmath
+
+# Installation node.js
+RUN curl -sL https://deb.nodesource.com/setup_16.x | bash - && apt-get update && apt-get install -y nodejs && npm install npm@latest -g
+
+WORKDIR /srv
+
+# Install Composer
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
+RUN if [ -n "$NON_PROD" ] ; then printf "User-agent: *\nDisallow: /\nNoindex: /\n" > ./web/robots.txt; fi
+
+CMD ["sudo", "/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
