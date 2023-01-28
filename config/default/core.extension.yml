@@ -32,6 +32,7 @@ module:
   views: 10
   minimal: 1000
 theme:
-  stark: 0
   claro: 0
+  olivero: 0
+  blog: 0
 profile: minimal

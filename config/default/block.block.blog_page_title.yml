@@ -1,14 +1,14 @@
-uuid: 25fbee2d-e18f-4841-85e3-4f6187d8b5ab
+uuid: 88d1ffef-2e95-4b45-999b-7ad9f595935e
 langcode: fr
 status: true
 dependencies:
   theme:
-    - stark
+    - blog
 _core:
-  default_config_hash: Oh72CHUkp6cj6dbrXMK2hzCsM05w9cHVoD22rMLQUfk
-id: stark_page_title
-theme: stark
-region: content
+  default_config_hash: fNwDdW063tk_ktzSWzZVeQS9wzvLooVO280BQ9WrsIs
+id: blog_page_title
+theme: blog
+region: header
 weight: -30
 provider: null
 plugin: page_title_block
