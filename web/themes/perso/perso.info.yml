@@ -1,0 +1,19 @@
+name: perso
+type: theme
+description: 'Theme site perso'
+core: 8.x
+core_version_requirement: ^8 || ^9 || ^10
+base theme: stark
+libraries:
+  - perso/global-styling
+  - perso/global-scripts
+regions:
+  header: Header
+  nav_branding: 'Navigation branding region'
+  nav_main: 'Main navigation region'
+  nav_additional: 'Additional navigation region (eg search form, social icons, etc)'
+  breadcrumb: Breadcrumbs
+  content: 'Main content'
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  footer: Footer

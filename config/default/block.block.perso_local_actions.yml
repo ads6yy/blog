@@ -1,0 +1,20 @@
+uuid: 04467528-dc72-470c-9b57-9e2ac29a2da2
+langcode: fr
+status: true
+dependencies:
+  theme:
+    - perso
+_core:
+  default_config_hash: CdXfDmRgAvms7EQovxxWPdYi0GitxeRbVtScYK16ZH0
+id: perso_local_actions
+theme: perso
+region: content
+weight: -10
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

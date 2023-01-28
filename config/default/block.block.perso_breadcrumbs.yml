@@ -1,0 +1,22 @@
+uuid: a96490db-127e-4204-b462-cf4e1b464b19
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - perso
+_core:
+  default_config_hash: NjcxOBrPOiK5-38t56DwFBDVY4yer7YSlbRWXFuHe7A
+id: perso_breadcrumbs
+theme: perso
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,20 @@
+uuid: 9d1a492e-1bea-43e1-8f39-8459256fe8ed
+langcode: fr
+status: true
+dependencies:
+  theme:
+    - perso
+_core:
+  default_config_hash: fNwDdW063tk_ktzSWzZVeQS9wzvLooVO280BQ9WrsIs
+id: perso_page_title
+theme: perso
+region: header
+weight: -30
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

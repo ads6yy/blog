@@ -34,5 +34,6 @@ module:
 theme:
   claro: 0
   olivero: 0
-  blog: 0
+  stark: 0
+  perso: 0
 profile: minimal

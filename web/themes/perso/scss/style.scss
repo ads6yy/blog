@@ -1,0 +1,24 @@
+// Include bootstrap variables definitions overrides.
+@import 'overrides/variables';
+
+// Include custom sub theme.
+@import 'custom/variables';
+
+// Include custom sub theme.
+@import 'custom/global';
+@import 'custom/search';
+@import 'custom/footer';
+@import 'custom/contact';
+
+//Effects
+@import 'custom/buttons';
+@import 'custom/hover_image_effects';
+
+// Node
+@import 'custom/article';
+@import 'custom/site_portfolio';
+
+// Strates
+@import 'custom/strate_cards';
+@import 'custom/strate_couleur_texte';
+@import 'custom/strate_swiper';
