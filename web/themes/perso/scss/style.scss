@@ -1,24 +1,11 @@
-// Include bootstrap variables definitions overrides.
-@import 'overrides/variables';
+// bootstrap
+@import "bootstrap/scss/bootstrap";
 
-// Include custom sub theme.
-@import 'custom/variables';
+// base
+@import "abstracts/colors";
+@import "abstracts/variables";
 
-// Include custom sub theme.
-@import 'custom/global';
-@import 'custom/search';
-@import 'custom/footer';
-@import 'custom/contact';
+// components
 
-//Effects
-@import 'custom/buttons';
-@import 'custom/hover_image_effects';
-
-// Node
-@import 'custom/article';
-@import 'custom/site_portfolio';
-
-// Strates
-@import 'custom/strate_cards';
-@import 'custom/strate_couleur_texte';
-@import 'custom/strate_swiper';
+// layout
+@import "layout/header";
