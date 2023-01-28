@@ -1,0 +1,29 @@
+uuid: 15cadf22-728a-4cfa-8b7b-daff2fb9c5b0
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.homepage.body
+    - node.type.homepage
+  module:
+    - text
+    - user
+id: node.homepage.default
+targetEntityType: node
+bundle: homepage
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
