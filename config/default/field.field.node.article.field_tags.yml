@@ -1,0 +1,21 @@
+uuid: 680f66fc-e19f-48ef-be7b-ebbb4b5746d7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tags
+    - node.type.article
+id: node.article.field_tags
+field_name: field_tags
+entity_type: node
+bundle: article
+label: Tags
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings: {  }
+field_type: entity_reference

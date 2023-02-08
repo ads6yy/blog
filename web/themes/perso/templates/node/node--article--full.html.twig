@@ -86,7 +86,9 @@
     {% endif %}
 
     <div{{ content_attributes }} class="p-5">
-        {{ content }}
+        {{ content.body }}
     </div>
+
+    {{ content.field_tags }}
 
 </article>
