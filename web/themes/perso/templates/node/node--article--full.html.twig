@@ -80,7 +80,7 @@
 
     {% if display_submitted %}
         <div{{ author_attributes }} class="fst-italic">
-            {% trans %}Submitted on {{ date }}{% endtrans %}
+            {% trans %}Submitted on{% endtrans %} {{ node.getCreatedTime()|date("m/d/Y") }}
             {{ metadata }}
         </div>
     {% endif %}
