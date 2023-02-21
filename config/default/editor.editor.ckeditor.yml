@@ -1,92 +1,66 @@
-uuid: f63ee661-cecf-490b-92fb-e7953cad6a4e
+uuid: 0dce590e-2bd1-416b-bce9-ca02897562c3
 langcode: fr
 status: true
 dependencies:
   config:
     - filter.format.ckeditor
   module:
-    - ckeditor
+    - ckeditor5
 format: ckeditor
-editor: ckeditor
+editor: ckeditor5
 settings:
   toolbar:
-    rows:
-      -
-        -
-          name: Outils
-          items:
-            - Source
-            - Maximize
-            - Undo
-            - Redo
-            - Paste
-            - PasteFromWord
-        -
-          name: Formats
-          items:
-            - Format
-            - Bold
-            - Italic
-            - Underline
-            - Strike
-            - JustifyLeft
-            - JustifyCenter
-            - JustifyRight
-            - JustifyBlock
-        -
-          name: Liens
-          items:
-            - DrupalLink
-            - DrupalUnlink
-        -
-          name: Listes
-          items:
-            - BulletedList
-            - NumberedList
-            - HorizontalRule
-        -
-          name: Media
-          items:
-            - Blockquote
-            - DrupalMediaLibrary
-        -
-          name: Code
-          items:
-            - CodeSnippet
+    items:
+      - sourceEditing
+      - undo
+      - redo
+      - '|'
+      - heading
+      - bold
+      - italic
+      - underline
+      - strikethrough
+      - alignment
+      - link
+      - '|'
+      - indent
+      - outdent
+      - bulletedList
+      - numberedList
+      - horizontalLine
+      - '|'
+      - drupalInsertImage
+      - drupalMedia
+      - '-'
+      - codeBlock
   plugins:
-    codesnippet:
-      highlight_style: github
-      highlight_languages:
-        apache: apache
-        bash: bash
-        cs: cs
-        cpp: cpp
-        coffeescript: coffeescript
-        css: css
-        diff: diff
-        html: html
-        http: http
-        ini: ini
-        java: java
-        javascript: javascript
-        json: json
-        makefile: makefile
-        markdown: markdown
-        nginx: nginx
-        objectivec: objectivec
-        perl: perl
-        php: php
-        python: python
-        ruby: ruby
-        sql: sql
-        vbscript: vbscript
-        xhtml: xhtml
-        xml: xml
+    ckeditor5_alignment:
+      enabled_alignments:
+        - center
+        - justify
+        - left
+        - right
+    ckeditor5_heading:
+      enabled_headings:
+        - heading2
+        - heading3
+        - heading4
+        - heading5
+        - heading6
+    ckeditor5_imageResize:
+      allow_resize: true
+    ckeditor5_list:
+      reversed: true
+      startIndex: true
+    ckeditor5_sourceEditing:
+      allowed_tags: {  }
+    media_media:
+      allow_view_mode_override: false
 image_upload:
   status: false
   scheme: public
   directory: inline-images
   max_size: ''
   max_dimensions:
-    width: null
-    height: null
+    width: 0
+    height: 0

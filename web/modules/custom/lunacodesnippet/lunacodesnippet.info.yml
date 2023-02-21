@@ -1,0 +1,8 @@
+name: Luna CodeSnippet
+type: module
+description: "Provides a Drupal CKEditor5 filter to include highlightjs syntax highlighter."
+package: Luna
+core_version_requirement: ^9 || ^10
+
+dependencies:
+  - drupal:ckeditor5

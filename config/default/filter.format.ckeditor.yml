@@ -3,6 +3,7 @@ langcode: fr
 status: true
 dependencies:
   module:
+    - lunacodesnippet
     - media
 name: CKEditor
 format: ckeditor
@@ -26,3 +27,9 @@ filters:
       default_view_mode: default
       allowed_view_modes: {  }
       allowed_media_types: {  }
+  filter_codesnippet:
+    id: filter_codesnippet
+    provider: lunacodesnippet
+    status: true
+    weight: 0
+    settings: {  }

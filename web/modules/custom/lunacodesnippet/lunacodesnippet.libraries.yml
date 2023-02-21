@@ -1,0 +1,8 @@
+highlightjs:
+  version: 0.0.2
+  js:
+    assets/js/highlight.pack.js: { minified: true }
+    assets/js/codesnippet.js: { minified: false }
+  css:
+    theme:
+      assets/css/github.css: { minified: false }
