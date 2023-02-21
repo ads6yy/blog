@@ -1,32 +1,32 @@
 <article{{ attributes }} class="col-4 pe-5 pb-5">
+    <a href="{{ url }}" class="text-decoration-none">
+        <div class="card">
+            <img class="card-img-top"
+                 src="https://loremflickr.com/1000/1000/landscape?random={{ node.id() }}"
+                 alt="random img"
+            >
 
-    <div class="card">
-        <img class="card-img-top"
-             src="https://loremflickr.com/1000/1000/landscape?random={{ node.id() }}"
-             alt="random img"
-        >
+            <div class="card-body">
+                <div class="card-title">
+                    {{ title_prefix }}
+                    {% if label %}
+                        <h2 class="fw-bold fw-rubik">
+                            {{ label }}
+                        </h2>
+                    {% endif %}
+                    {{ title_suffix }}
+                </div>
 
-        <div class="card-body">
-            <div class="card-title">
-                {{ title_prefix }}
-                {% if label %}
-                    <h2 class="fw-bold fw-rubik">
-                        {{ label }}
-                    </h2>
-                {% endif %}
-                {{ title_suffix }}
+                <div class="card-text">
+                    {% if display_submitted %}
+                        <div{{ author_attributes }} class="fst-italic">
+                            {% trans %}Submitted on{% endtrans %} {{ node.getCreatedTime()|date("m/d/Y") }}
+                            {{ metadata }}
+                        </div>
+                    {% endif %}
+                </div>
             </div>
 
-            <div class="card-text">
-                {% if display_submitted %}
-                    <div{{ author_attributes }} class="fst-italic">
-                        {% trans %}Submitted on{% endtrans %} {{ node.getCreatedTime()|date("m/d/Y") }}
-                        {{ metadata }}
-                    </div>
-                {% endif %}
-            </div>
         </div>
-
-    </div>
-
+    </a>
 </article>
