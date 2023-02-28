@@ -1,0 +1,7 @@
+article-library:
+  version: 1.x
+  css:
+    theme:
+      css/article-theme.css: {}
+  js:
+    js/article.js: {}

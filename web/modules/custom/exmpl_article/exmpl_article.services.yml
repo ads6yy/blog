@@ -1,0 +1,5 @@
+services:
+  exmpl_article.entity.manager:
+    class: Drupal\exmpl_article\Manager\ArticleManager
+    arguments:
+      - '@entity_type.manager'

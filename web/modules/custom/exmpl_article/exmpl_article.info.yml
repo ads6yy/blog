@@ -1,0 +1,5 @@
+name: exmpl_article
+type: module
+description: Provides additional functionality for article.
+package: Custom
+core_version_requirement: ^9 || ^10
