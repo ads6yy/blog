@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * Implements hook_ckeditor5_plugin_info_alter().
+ */
+function lunacodesnippet_ckeditor5_plugin_info_alter(array &$plugin_definitions) {
+  /** @var \Drupal\ckeditor5\Plugin\CKEditor5PluginDefinition $codeEditorPlugin */
+  if (isset($plugin_definitions['ckeditor5_codeBlock']) && $codeEditorPlugin = $plugin_definitions['ckeditor5_codeBlock']) {
+    $codeEditorPlugin = $codeEditorPlugin->toArray();
+    $codeEditorPlugin['ckeditor5']['config']['codeBlock']['languages'][] = [
+      'language' => 'yaml',
+      'label' => 'YAML',
+    ];
+    $plugin_definitions['ckeditor5_codeBlock'] = new \Drupal\ckeditor5\Plugin\CKEditor5PluginDefinition($codeEditorPlugin);
+  }
+}

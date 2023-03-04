@@ -40,6 +40,13 @@ settings:
         - justify
         - left
         - right
+    ckeditor5_codeBlock:
+      enabled_languages:
+        - css
+        - html
+        - javascript
+        - php
+        - yaml
     ckeditor5_heading:
       enabled_headings:
         - heading2
