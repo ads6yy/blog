@@ -20,7 +20,7 @@
                 <div class="card-text">
                     {% if display_submitted %}
                         <div{{ author_attributes }} class="fst-italic">
-                            {% trans %}Submitted on{% endtrans %} {{ node.getCreatedTime()|date("m/d/Y") }}
+                            {% trans %}Submitted on{% endtrans %} {{ node.getCreatedTime()|date("d/m/Y") }}
                             {{ metadata }}
                         </div>
                     {% endif %}
