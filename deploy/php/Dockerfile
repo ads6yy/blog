@@ -6,7 +6,7 @@ ENV \
 
 
 RUN apt-get update \
-    && apt-get install -y libfreetype6-dev libjpeg62-turbo-dev libpng-dev wget git libzip-dev unzip python sudo default-mysql-client libwebp-dev
+    && apt-get install -y libfreetype6-dev libjpeg62-turbo-dev libpng-dev wget git libzip-dev unzip python3 sudo default-mysql-client libwebp-dev
 
 RUN  docker-php-ext-configure gd --with-freetype=/usr/include/ --with-jpeg=/usr/include/ --with-webp=/usr/include/ \
      && docker-php-ext-install gd \
@@ -16,7 +16,10 @@ RUN  docker-php-ext-configure gd --with-freetype=/usr/include/ --with-jpeg=/usr/
      && docker-php-ext-install bcmath
 
 # Installation node.js
-RUN curl -sL https://deb.nodesource.com/setup_16.x | bash - && apt-get update && apt-get install -y nodejs && npm install npm@latest -g
+RUN curl -sL https://deb.nodesource.com/setup_16.x | bash - && apt-get update
+RUN apt-get install -y nodejs
+RUN apt-get install -y npm
+RUN npm install npm@latest -g
 
 WORKDIR /srv
 
