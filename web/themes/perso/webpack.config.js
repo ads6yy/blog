@@ -61,7 +61,7 @@ module.exports = (env, argv) => {
           test: /\.(woff|woff2|eot|ttf|otf|svg)$/i,
           type: 'asset/resource',
           generator: {
-            filename: "../../../../themes/perso/fonts/[name][ext][query]",
+            filename: "../../../themes/perso/fonts/[name][ext][query]",
           },
         },
       ]
