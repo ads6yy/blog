@@ -799,6 +799,17 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 $settings['config_sync_directory'] = '../config/default';
 $config_directories['sync'] = '../config/default';
 
+$databases['default']['default'] = [
+  'database' => $_ENV['MYSQL_DATABASE'],
+  'username' => $_ENV['MYSQL_USER'],
+  'password' => $_ENV['MYSQL_PASSWORD'],
+  'host' => $_ENV['MYSQL_HOST'],
+  'port' => '3306',
+  'driver' => 'mysql',
+  'prefix' => '',
+  'collation' => 'utf8mb4_general_ci',
+];
+
 /**
  * Load local development override configuration, if available.
  *

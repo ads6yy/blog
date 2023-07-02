@@ -24,8 +24,8 @@ services:
       target: client_php
     volumes:
       - ../:/srv
-      - ./apache/000-default.conf:/etc/apache2/sites-enabled/000-default.conf
-      - ./php/php.ini:/usr/local/etc/php/conf.d/custom.ini
+      - ./.env:/srv/.env
+      - ./apache/000-default.conf:/etc/apache2/sites-available/000-default.conf
     ports:
       - '8766:80'
 
