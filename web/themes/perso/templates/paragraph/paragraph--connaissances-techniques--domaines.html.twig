@@ -1,0 +1,11 @@
+<li class="nav-item" role="presentation">
+    <button class="nav-link {{ paragraph.index is same as 0 ? 'active' }}"
+            id="p-{{ paragraph.id() }}-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#p-{{ paragraph.id() }}"
+            type="button" role="tab"
+            aria-controls="p-{{ paragraph.id() }}"
+            aria-selected="true">
+        {{ content.field_libelle }}
+    </button>
+</li>

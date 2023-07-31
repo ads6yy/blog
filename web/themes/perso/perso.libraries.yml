@@ -14,3 +14,8 @@ global-scripts:
     - core/jquery.once
     - core/drupal
     - core/drupalSettings
+
+competence:
+  js:
+    js/competence.js: { minified: true }
+    js/progressbar.min.js: { minified: true }

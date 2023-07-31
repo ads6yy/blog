@@ -1,0 +1,33 @@
+uuid: ba76b5bb-7f3f-4794-9d95-76bab8d1ccec
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.domaine.field_competences
+    - field.field.paragraph.domaine.field_libelle
+    - paragraphs.paragraphs_type.domaine
+  module:
+    - entity_reference_revisions
+id: paragraph.domaine.default
+targetEntityType: paragraph
+bundle: domaine
+mode: default
+content:
+  field_competences:
+    type: entity_reference_revisions_entity_view
+    label: visually_hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_libelle:
+    type: string
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

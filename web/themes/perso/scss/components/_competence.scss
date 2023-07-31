@@ -1,0 +1,10 @@
+.tab-pane.competences {
+  &.active {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .note-competence {
+    width: 5rem;
+  }
+}

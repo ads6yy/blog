@@ -1,0 +1,10 @@
+uuid: 63bc603f-d3d3-4ec9-9232-a6aab3864469
+langcode: fr
+status: true
+dependencies: {  }
+id: competence
+label: Compétence
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,34 @@
+uuid: 7fa8726c-7499-43ac-aa20-17c97a108479
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_competences
+    - paragraphs.paragraphs_type.competence
+    - paragraphs.paragraphs_type.domaine
+  module:
+    - entity_reference_revisions
+id: paragraph.domaine.field_competences
+field_name: field_competences
+entity_type: paragraph
+bundle: domaine
+label: Compétences
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      competence: competence
+    negate: 0
+    target_bundles_drag_drop:
+      competence:
+        weight: 3
+        enabled: true
+      domaine:
+        weight: 4
+        enabled: false
+field_type: entity_reference_revisions

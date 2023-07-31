@@ -11,6 +11,7 @@ module:
   dblog: 0
   dynamic_page_cache: 0
   editor: 0
+  entity_reference_revisions: 0
   exmpl_article: 0
   field: 0
   field_ui: 0
@@ -46,6 +47,7 @@ module:
   views_ui: 0
   pathauto: 1
   views: 10
+  paragraphs: 11
   minimal: 1000
 theme:
   claro: 0

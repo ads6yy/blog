@@ -1,0 +1,23 @@
+uuid: 1921a17a-796a-42dc-8fd0-2f77ea638206
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_note
+    - paragraphs.paragraphs_type.competence
+id: paragraph.competence.field_note
+field_name: field_note
+entity_type: paragraph
+bundle: competence
+label: Note
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: 20
+  prefix: ''
+  suffix: ''
+field_type: integer
