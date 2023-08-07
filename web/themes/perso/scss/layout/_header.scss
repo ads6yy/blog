@@ -1,0 +1,22 @@
+.headroom {
+  height: 80px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  overflow-y: inherit;
+  min-height: auto;
+  bottom: inherit;
+  -webkit-overflow-scrolling: touch;
+  z-index: 100;
+  transform: translateX(0);
+
+  will-change: transform;
+  transition: all 0.3s linear;
+
+  &.headroom--pinned.headroom--top {
+    height: 80px;
+  }
+  &.headroom--unpinned, &.headroom--not-top {
+    height: 60px;
+  }
+}
