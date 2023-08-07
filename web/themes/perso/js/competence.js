@@ -15,8 +15,8 @@
 						value: '',
 						alignToBottom: true
 					},
-					from: {color: '#ff0000'},
-					to: {color: '#008000'},
+					from: {color: '#97DEFF'},
+					to: {color: '#AA77FF'},
 					// Set default step function for all animate calls
 					step: (state, bar) => {
 						bar.path.setAttribute('stroke', state.color);
