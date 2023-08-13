@@ -4,7 +4,15 @@
     flex-wrap: wrap;
   }
 
-  .note-competence {
-    width: 5rem;
+  .competence {
+    .note-competence {
+      width: 3.5rem;
+      .progressbar-text {
+        font-size: 12px;
+      }
+    }
+    .libelle {
+      font-size: 14px;
+    }
   }
 }

@@ -1,5 +1,14 @@
+.toolbar-fixed {
+  .headroom {
+    top: 39px;
+  }
+  &.toolbar-tray-open .headroom {
+    top: 78.6667px;
+  }
+}
+
 .headroom {
-  height: 80px;
+  height: 100px;
   position: fixed;
   top: 0;
   width: 100%;
@@ -11,12 +20,31 @@
   transform: translateX(0);
 
   will-change: transform;
-  transition: all 0.3s linear;
+  transition: all 0.1s linear;
+
+  background-color: $primary;
+  border-color: $secondary;
+
+  .logo {
+    opacity: 1;
+    height: 50px;
+    transition: all 0.1s linear;
+    img {
+      height: inherit;
+    }
+  }
 
   &.headroom--pinned.headroom--top {
-    height: 80px;
+    height: 100px;
   }
   &.headroom--unpinned, &.headroom--not-top {
-    height: 60px;
+    height: 50px;
+    background-color: $secondary;
+    border-color: $primary;
+    .logo {
+      opacity: 0;
+      height: 0;
+      visibility: hidden;
+    }
   }
 }

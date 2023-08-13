@@ -4,10 +4,10 @@
 			$('.note-competence').each(function () {
 
 				var bar = new ProgressBar.Circle('#' + this.id, {
-					strokeWidth: 10,
+					strokeWidth: 4,
 					color: '#FFEA82',
 					trailColor: '#eee',
-					trailWidth: 1,
+					trailWidth: 0.1,
 					easing: 'easeInOut',
 					duration: 1400,
 					svgStyle: null,

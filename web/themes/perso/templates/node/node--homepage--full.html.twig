@@ -4,6 +4,12 @@
         {{ content.body }}
     </div>
 
+    <hr/>
+
+    <div class="ckeditor">
+        {{ content.field_introduction_competences }}
+    </div>
+
     <ul class="nav nav-tabs mb-3" id="ex1" role="tablist">
         {{ content.field_connaissances_techniques|add_suggestion('connaissances-techniques--domaines') }}
     </ul>

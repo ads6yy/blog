@@ -1,6 +1,6 @@
 {% import _self as menus %}
 
-<nav class="navbar navbar-expand-lg h-100 my-auto">
+<nav class="navbar navbar-expand-lg h-100 my-auto p-0">
     <div class="container-fluid">
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             {{ menus.menu_links(items, attributes, 0) }}
@@ -18,7 +18,7 @@
         {% endif %}
         {% for item in items %}
             {% set classes_link = [
-                'nav-link',
+                'nav-link py-1',
                 item.is_expanded ? 'drdopdown-toggle',
                 item.is_collapsed ? 'dropdown-toggle',
                 item.in_active_trail ? 'active',

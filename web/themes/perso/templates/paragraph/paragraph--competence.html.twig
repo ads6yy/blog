@@ -1,9 +1,9 @@
 {{ attach_library('perso/competence') }}
 
-<div class="d-flex flex-column col-6 col-lg-3 align-items-center mb-5">
+<div class="competence d-flex flex-column col-6 col-lg-2 align-items-center mb-5">
     <div id="note-competence-{{ paragraph.id() }}"
          class="note-competence"
          data-note="{{ content.field_note }}">
     </div>
-    <span class="text-center">{{ content.field_competence }}</span>
+    <span class="libelle text-center">{{ content.field_competence }}</span>
 </div>
