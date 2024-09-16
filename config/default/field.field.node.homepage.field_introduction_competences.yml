@@ -1,0 +1,21 @@
+uuid: b62af498-167b-4de0-8c19-d37321ac51c6
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_introduction_competences
+    - node.type.homepage
+  module:
+    - text
+id: node.homepage.field_introduction_competences
+field_name: field_introduction_competences
+entity_type: node
+bundle: homepage
+label: 'Introduction compétences'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

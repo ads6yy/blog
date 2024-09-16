@@ -17,16 +17,16 @@
   "require": {
     "composer/installers": "^2.0",
     "cweagans/composer-patches": "^1.7",
-    "drupal/admin_toolbar": "^3.3",
+    "drupal/admin_toolbar": "^3",
     "drupal/better_exposed_filters": "^6.0",
-    "drupal/core-composer-scaffold": "^10.0",
-    "drupal/core-project-message": "^10.0",
-    "drupal/core-recommended": "^10.0",
-    "drupal/devel": "^5.1",
-    "drupal/paragraphs": "^1.15",
-    "drupal/pathauto": "^1.11",
-    "drupal/views_infinite_scroll": "^2.0",
-    "drush/drush": "^11.4",
+    "drupal/core-composer-scaffold": "^10",
+    "drupal/core-project-message": "^10",
+    "drupal/core-recommended": "^10",
+    "drupal/devel": "^5.3",
+    "drupal/paragraphs": "^1",
+    "drupal/pathauto": "^1",
+    "drupal/views_infinite_scroll": "^2",
+    "drush/drush": "^12",
     "vlucas/phpdotenv": "^5.5"
   },
   "conflict": {
@@ -54,7 +54,7 @@
     "enable-patching": true,
     "patches": {
       "drupal/core": {
-        "Ability to configure additional languages (e.g. \"bash\" or \"SQL\") for CKEditor 5 CodeBlock plugin": "https://www.drupal.org/files/issues/2022-11-18/3282233-27-D10_0.patch"
+
       }
     },
     "drupal-scaffold": {

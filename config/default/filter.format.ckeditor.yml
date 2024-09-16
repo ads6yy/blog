@@ -9,6 +9,12 @@ name: CKEditor
 format: ckeditor
 weight: 0
 filters:
+  filter_codesnippet:
+    id: filter_codesnippet
+    provider: lunacodesnippet
+    status: true
+    weight: 0
+    settings: {  }
   filter_html:
     id: filter_html
     provider: filter
@@ -27,9 +33,3 @@ filters:
       default_view_mode: default
       allowed_view_modes: {  }
       allowed_media_types: {  }
-  filter_codesnippet:
-    id: filter_codesnippet
-    provider: lunacodesnippet
-    status: true
-    weight: 0
-    settings: {  }

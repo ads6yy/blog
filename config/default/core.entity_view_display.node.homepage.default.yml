@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.homepage.body
     - field.field.node.homepage.field_connaissances_techniques
+    - field.field.node.homepage.field_introduction_competences
     - node.type.homepage
   module:
     - entity_reference_revisions
@@ -30,6 +31,13 @@ content:
       link: ''
     third_party_settings: {  }
     weight: 102
+    region: content
+  field_introduction_competences:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
     region: content
   links:
     settings: {  }

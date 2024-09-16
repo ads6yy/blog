@@ -15,7 +15,7 @@ services:
     volumes:
       - blog-data:/var/lib/mysql
     ports:
-      - "3210:3306"
+      - "3212:3306"
 
   php:
     container_name: blog-php-apache
