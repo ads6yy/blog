@@ -30,7 +30,13 @@
   },
   "dependencies": {
     "autoprefixer": "^10.4.20",
+    "babel-loader": "^10.0.0",
+    "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^7.1.2",
+    "html-loader": "^5.1.0",
+    "json-minimizer-webpack-plugin": "^5.0.0",
+    "node-sass": "^9.0.0",
+    "sass-loader": "^16.0.5",
     "style-loader": "^4.0.0"
   }
 }
