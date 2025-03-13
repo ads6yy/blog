@@ -1,13 +1,5 @@
 @import "tailwindcss";
 
-@theme {
-  --color-adsy-tottenham-blue: #132257;
-  --color-adsy-dark-blue: #9BCBFF;
-  --color-adsy-blue: #9BCBFF;
-  --color-light-blue: #CDE5FF;
-}
+@import "fonts";
 
-@utility container {
-  margin-inline: auto;
-  padding-inline: 2rem;
-}
+@import "tailwind-config";
