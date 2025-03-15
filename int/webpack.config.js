@@ -6,21 +6,20 @@ const JsonMinimizerPlugin = require("json-minimizer-webpack-plugin")
 const path = require('path')
 
 module.exports = {
-	mode: "production",
+	target: "web",
+	mode: "development",
 	entry: './src/scripts/index.js',
 	output: {
 		path: path.join(__dirname, "build"),
 		filename: "js/[name].js",
 	},
+	devtool: "source-map",
 	devServer: {
 		static: {
 			directory: path.resolve(__dirname, 'src/pages'),
 		},
 		port: 3000,
-		open: true,
 		hot: true,
-		compress: true,
-		historyApiFallback: true,
 	},
 	optimization: {
 		splitChunks: {
@@ -53,7 +52,7 @@ module.exports = {
 				use: "babel-loader",
 			},
 			{
-				test: /\.s?css/i,
+				test: /\.s?css$/i,
 				use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader", "sass-loader"],
 			},
 		],

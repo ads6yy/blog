@@ -1,0 +1,26 @@
+a {
+  @apply w-fit border-b;
+  &:hover,
+  &:focus {
+    @apply border-b transition-all duration-500 ease-in-out;
+  }
+}
+
+a.link {
+  @apply border-transparent;
+  &:hover,
+  &:focus {
+    @apply border-adsy-tottenham-blue;
+  }
+}
+a.link-reverse {
+  @apply border-adsy-tottenham-blue;
+  &:hover,
+  &:focus {
+    @apply border-transparent;
+  }
+}
+
+a[disabled] {
+  @apply cursor-not-allowed text-gray-400;
+}
