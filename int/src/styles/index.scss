@@ -1,7 +1,9 @@
-@import "tailwindcss";
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 @import "fonts";
 @import "links";
 @import "buttons";
 
-@import "tailwind-config";
+@config "../../tailwind.config.js"

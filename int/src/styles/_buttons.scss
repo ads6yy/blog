@@ -6,26 +6,18 @@
 }
 
 .btn-fill {
-  background-color: var(--color-adsy-tottenham-blue);
-  border-color: var(--color-adsy-tottenham-blue);
-  color: var(--color-white);
+  @apply bg-adsy-tottenham-blue border-adsy-tottenham-blue text-white;
   &:hover {
-    background-color: var(--color-adsy-tottenham-blue);
-    border-color: var(--color-adsy-tottenham-blue);
-    color: var(--color-white);
+    @apply bg-adsy-tottenham-blue border-adsy-tottenham-blue text-white;
   }
   &:focus {
     @apply ring ring-gray-100;
   }
 }
 .btn-outline {
-  background-color: var(--color-white);
-  border-color: var(--color-adsy-tottenham-blue);
-  color: var(--color-adsy-tottenham-blue);
+  @apply bg-white border-adsy-tottenham-blue text-adsy-tottenham-blue;
   &:hover {
-    background-color: var(--color-adsy-tottenham-blue);
-    border-color: var(--color-adsy-tottenham-blue);
-    color: var(--color-white);
+    @apply bg-adsy-tottenham-blue border-adsy-tottenham-blue text-white;
   }
   &:focus {
     @apply ring ring-gray-100;
@@ -70,22 +62,14 @@
 }
 
 .btn-adsy-light-blue {
-  background-color: var(--color-adsy-light-blue);
-  border-color: var(--color-adsy-light-blue);
-  color: var(--color-white);
+  @apply bg-adsy-light-blue border-adsy-light-blue text-white;
   &:hover {
-    background-color: var(--color-adsy-light-blue);
-    border-color: var(--color-adsy-light-blue);
-    color: var(--color-white);
+    @apply bg-adsy-light-blue border-adsy-light-blue text-white;
   }
   &.btn-outline {
-    background-color: var(--color-white);
-    border-color: var(--color-adsy-light-blue);
-    color: var(--color-adsy-light-blue);
+    @apply bg-white border-adsy-light-blue text-adsy-light-blue;
     &:hover {
-      background-color: var(--color-adsy-light-blue);
-      border-color: var(--color-adsy-light-blue);
-      color: var(--color-white);
+      @apply bg-adsy-light-blue border-adsy-light-blue text-white;
     }
     &:focus {
       @apply ring ring-gray-100;
@@ -93,22 +77,14 @@
   }
 }
 .btn-adsy-blue {
-  background-color: var(--color-adsy-blue);
-  border-color: var(--color-adsy-blue);
-  color: var(--color-white);
+  @apply bg-adsy-blue border-adsy-blue text-white;
   &:hover {
-    background-color: var(--color-adsy-blue);
-    border-color: var(--color-adsy-blue);
-    color: var(--color-white);
+    @apply bg-adsy-blue border-adsy-blue text-white;
   }
   &.btn-outline {
-    background-color: var(--color-white);
-    border-color: var(--color-adsy-blue);
-    color: var(--color-adsy-blue);
+    @apply bg-white border-adsy-blue text-adsy-blue;
     &:hover {
-      background-color: var(--color-adsy-blue);
-      border-color: var(--color-adsy-blue);
-      color: var(--color-white);
+      @apply bg-adsy-blue border-adsy-blue text-white;
     }
     &:focus {
       @apply ring ring-gray-100;
@@ -116,22 +92,14 @@
   }
 }
 .btn-adsy-tottenham-blue {
-  background-color: var(--color-adsy-tottenham-blue);
-  border-color: var(--color-adsy-tottenham-blue);
-  color: var(--color-white);
+  @apply bg-adsy-tottenham-blue border-adsy-tottenham-blue text-white;
   &:hover {
-    background-color: var(--color-adsy-tottenham-blue);
-    border-color: var(--color-adsy-tottenham-blue);
-    color: var(--color-white);
+    @apply bg-adsy-tottenham-blue border-adsy-tottenham-blue text-white;
   }
   &.btn-outline {
-    background-color: var(--color-white);
-    border-color: var(--color-adsy-tottenham-blue);
-    color: var(--color-adsy-tottenham-blue);
+    @apply bg-white border-adsy-tottenham-blue text-adsy-tottenham-blue;
     &:hover {
-      background-color: var(--color-adsy-tottenham-blue);
-      border-color: var(--color-adsy-tottenham-blue);
-      color: var(--color-white);
+      @apply bg-adsy-tottenham-blue border-adsy-tottenham-blue text-white;
     }
     &:focus {
       @apply ring ring-gray-100;
@@ -139,22 +107,14 @@
   }
 }
 .btn-adsy-dark-blue {
-  background-color: var(--color-adsy-dark-blue);
-  border-color: var(--color-adsy-dark-blue);
-  color: var(--color-white);
+  @apply bg-adsy-dark-blue border-adsy-dark-blue text-white;
   &:hover {
-    background-color: var(--color-adsy-dark-blue);
-    border-color: var(--color-adsy-dark-blue);
-    color: var(--color-white);
+    @apply bg-adsy-dark-blue border-adsy-dark-blue text-white;
   }
   &.btn-outline {
-    background-color: var(--color-white);
-    border-color: var(--color-adsy-dark-blue);
-    color: var(--color-adsy-dark-blue);
+    @apply bg-white border-adsy-dark-blue text-adsy-dark-blue;
     &:hover {
-      background-color: var(--color-adsy-dark-blue);
-      border-color: var(--color-adsy-dark-blue);
-      color: var(--color-white);
+      @apply bg-adsy-dark-blue border-adsy-dark-blue text-white;
     }
     &:focus {
       @apply ring ring-gray-100;

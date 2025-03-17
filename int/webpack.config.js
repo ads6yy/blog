@@ -1,60 +1,68 @@
-const MiniCssExtractPlugin = require("mini-css-extract-plugin")
-const HtmlWebpackPlugin = require("html-webpack-plugin")
-const { CleanWebpackPlugin } = require("clean-webpack-plugin")
-const JsonMinimizerPlugin = require("json-minimizer-webpack-plugin")
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
-const path = require('path')
+const path = require('path');
 
 module.exports = {
-	target: "web",
-	mode: "development",
-	entry: './src/scripts/index.js',
+	target: 'web',
+	mode: 'development',
+	entry: {
+		app: path.resolve(__dirname, "src/scripts/index.js"),
+	},
 	output: {
 		path: path.join(__dirname, "build"),
 		filename: "js/[name].js",
+		chunkFilename: "js/[name].chunk.js",
 	},
-	devtool: "source-map",
+	devtool: 'source-map',
 	devServer: {
-		static: {
-			directory: path.resolve(__dirname, 'src/pages'),
-		},
 		port: 3000,
 		hot: true,
-	},
-	optimization: {
-		splitChunks: {
-			chunks: "all",
-			name: false,
-		},
-		minimize: true,
-		minimizer: [new JsonMinimizerPlugin()],
 	},
 	plugins: [
 		new CleanWebpackPlugin(),
 		new HtmlWebpackPlugin({
-			template: path.resolve(__dirname, "src/pages/index.html"),
-			filename: "index.html",
+			template: path.resolve(__dirname, 'src/pages/index.html'),
+			filename: 'index.html',
+			cache: false,
 		}),
 		new MiniCssExtractPlugin({
-			filename: "css/[name].css",
+			filename: "css/main.css",
 			chunkFilename: "css/[name].chunk.js",
 		}),
 	],
+	resolve: {
+		alias: {
+			"~": path.resolve(__dirname, "src"),
+		},
+	},
 	module: {
 		rules: [
 			{
 				test: /\.html$/i,
-				loader: "html-loader",
+				loader: 'html-loader',
 			},
 			{
 				test: /\.js$/,
-				exclude: /node_modules/,
-				use: "babel-loader",
+				include: path.resolve(__dirname, "src"),
+				use: 'babel-loader',
 			},
 			{
 				test: /\.s?css$/i,
-				use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader", "sass-loader"],
+				use: [
+					MiniCssExtractPlugin.loader,
+					// "style-loader",
+					{
+						loader: "css-loader",
+						options: {
+							sourceMap: true,
+						},
+					},
+					"postcss-loader",
+					"sass-loader",
+				],
 			},
 		],
 	},
-}
+};
