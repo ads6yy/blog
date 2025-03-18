@@ -1,0 +1,9 @@
+header {
+  @apply bg-adsy-tottenham-blue;
+  nav {
+    @apply container flex py-4 justify-between items-center text-white;
+    ul {
+      @apply flex gap-10;
+    }
+  }
+}
