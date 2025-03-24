@@ -8,13 +8,26 @@ a {
 
 a.link {
   @apply border-transparent;
+
   &:hover,
   &:focus {
     @apply border-adsy-tottenham-blue;
   }
+
+  &.link-white {
+    &:hover,
+    &:focus {
+      @apply border-white;
+    }
+  }
 }
 a.link-reverse {
   @apply border-adsy-tottenham-blue;
+
+  &.link-white {
+    @apply border-white;
+  }
+
   &:hover,
   &:focus {
     @apply border-transparent;
