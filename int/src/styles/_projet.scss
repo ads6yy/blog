@@ -1,0 +1,16 @@
+.card-article {
+  @apply flex flex-col overflow-hidden border border-adsy-tottenham-blue rounded-lg w-full;
+  .card-img {
+    @apply h-3/5;
+  }
+  .card-content {
+    @apply flex flex-col flex-1 p-2 gap-2;
+
+    .date {
+      @apply text-xs;
+    }
+    h3 {
+      @apply text-lg pb-2;
+    }
+  }
+}
