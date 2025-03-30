@@ -40,11 +40,14 @@ module.exports = {
 					"2xl": "1440px",
 				},
 			},
+			aspectRatio: {
+				'16/9': '16/9',
+			},
 		},
   },
   corePlugins: {
     preflight: true,
-    aspectRatio: false,
+    aspectRatio: true,
   },
 	plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms"), require("@tailwindcss/aspect-ratio"), require("@tailwindcss/container-queries")],
 }

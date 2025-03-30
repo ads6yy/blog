@@ -1,7 +1,17 @@
 .card-article {
   @apply flex flex-col overflow-hidden border border-adsy-tottenham-blue rounded-lg w-full;
+  @apply transition-all duration-200 ease-in hover:shadow-2xl;
+
   .card-img {
-    @apply h-3/5;
+    @apply h-3/5 overflow-hidden relative;
+    span {
+      @apply z-10 absolute bottom-0 left-0 right-0 top-0 bg-gradient-to-t from-adsy-tottenham-blue/50;
+      @apply transition-all duration-200 ease-in;
+    }
+    img {
+      @apply object-cover aspect-16/9;
+      @apply transition-all duration-200 ease-in;
+    }
   }
   .card-content {
     @apply flex flex-col flex-1 p-2 gap-2;
@@ -11,6 +21,17 @@
     }
     h3 {
       @apply text-lg pb-2;
+    }
+  }
+
+  &:hover {
+    .card-img {
+      span {
+        @apply from-adsy-tottenham-blue/20;
+      }
+      img {
+        transform: scale(1.1);
+      }
     }
   }
 }
