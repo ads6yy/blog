@@ -1,0 +1,39 @@
+.card-projet {
+  @apply flex gap-10 p-4 overflow-hidden border border-adsy-tottenham-blue rounded-lg w-full;
+  @apply transition-all duration-200 ease-in hover:shadow-2xl;
+
+  .left-panel {
+    @apply flex flex-col justify-between;
+
+    .logo {
+      img {
+        @apply overflow-hidden rounded-lg;
+      }
+    }
+
+    .card-content {
+      @apply flex flex-col;
+      .titre {
+        @apply flex items-center gap-2;
+      }
+      .description {
+
+      }
+    }
+
+    .tags {
+      @apply flex flex-wrap gap-2;
+      li {
+        @apply text-xs p-2 border border-adsy-tottenham-blue rounded-lg;
+      }
+    }
+  }
+
+  .right-panel {
+    @apply flex flex-col gap-4;
+
+    .screenshot {
+      @apply overflow-hidden rounded-lg;
+    }
+  }
+}
