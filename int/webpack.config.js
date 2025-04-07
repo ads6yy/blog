@@ -32,6 +32,21 @@ module.exports = {
 			filename: 'page-template.html',
 			cache: false,
 		}),
+		new HtmlWebpackPlugin({
+			template: path.resolve(__dirname, 'src/pages/homepage.html'),
+			filename: 'homepage.html',
+			cache: false,
+		}),
+		new HtmlWebpackPlugin({
+			template: path.resolve(__dirname, 'src/pages/articles.html'),
+			filename: 'articles.html',
+			cache: false,
+		}),
+		new HtmlWebpackPlugin({
+			template: path.resolve(__dirname, 'src/pages/projets.html'),
+			filename: 'projets.html',
+			cache: false,
+		}),
 		new MiniCssExtractPlugin({
 			filename: "css/main.css",
 			chunkFilename: "css/[name].chunk.js",
