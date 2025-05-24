@@ -1,8 +1,8 @@
-<article{{ attributes }}>
+<article {{ attributes }} class="flex flex-col gap-16 py-16">
 
     {{ title_prefix }}
     {% if label %}
-        <h1 class="text-uppercase fw-bold fw-rubik text-bg-primary p-2 mb-2">
+        <h1 class="text-4xl text-adsy-tottenham-blue font-semibold">
             {{ label }}
         </h1>
     {% endif %}
@@ -15,10 +15,8 @@
         </div>
     {% endif %}
 
-    <div{{ content_attributes }} class="p-2 p-md-5 ckeditor">
+    <div{{ content_attributes }}>
         {{ content.body }}
     </div>
-
-    {{ content.field_tags }}
 
 </article>
