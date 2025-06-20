@@ -25,6 +25,7 @@
     "drupal/devel": "^5.3",
     "drupal/paragraphs": "^1",
     "drupal/pathauto": "^1",
+    "drupal/twig_tweak": "^3.4",
     "drupal/views_infinite_scroll": "^2",
     "drush/drush": "^12",
     "vlucas/phpdotenv": "^5.5"

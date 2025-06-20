@@ -1,0 +1,22 @@
+<article {{ attributes }} class="flex flex-col gap-16 py-16">
+
+    {{ title_prefix }}
+    {% if label %}
+        <h1 class="text-4xl text-adsy-tottenham-blue font-semibold">
+            {{ label }}
+        </h1>
+    {% endif %}
+    {{ title_suffix }}
+
+    {% if display_submitted %}
+        <div{{ author_attributes }} class="fst-italic">
+            {% trans %}Submitted on{% endtrans %} {{ node.getCreatedTime()|date("d/m/Y") }}
+            {{ metadata }}
+        </div>
+    {% endif %}
+
+    <div{{ content_attributes }}>
+        {{ content.body }}
+    </div>
+
+</article>

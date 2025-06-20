@@ -1,0 +1,72 @@
+uuid: 9fb72153-3cee-4590-8e89-c91349cfa253
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.projet.body
+    - field.field.node.projet.field_logo
+    - field.field.node.projet.field_tags
+    - field.field.node.projet.field_url_git
+    - field.field.node.projet.field_vignette
+    - node.type.projet
+  module:
+    - link
+    - text
+    - user
+id: node.projet.default
+targetEntityType: node
+bundle: projet
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_logo:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_tags:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_url_git:
+    type: link
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: _blank
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_vignette:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

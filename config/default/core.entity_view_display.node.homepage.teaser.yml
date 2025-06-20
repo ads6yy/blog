@@ -5,8 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.homepage.body
-    - field.field.node.homepage.field_connaissances_techniques
-    - field.field.node.homepage.field_introduction_competences
     - node.type.homepage
   module:
     - text
@@ -30,6 +28,4 @@ content:
     weight: 100
     region: content
 hidden:
-  field_connaissances_techniques: true
-  field_introduction_competences: true
   langcode: true
