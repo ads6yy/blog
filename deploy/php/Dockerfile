@@ -1,4 +1,4 @@
-FROM php:8.1-apache as client_php
+FROM php:8.4-apache as client_php
 
 ENV \
     COMPOSER_ALLOW_SUPERUSER=1 \
@@ -14,12 +14,6 @@ RUN  docker-php-ext-configure gd --with-freetype=/usr/include/ --with-jpeg=/usr/
      && docker-php-ext-install pdo pdo_mysql opcache zip \
      && docker-php-ext-enable pdo pdo_mysql opcache zip \
      && docker-php-ext-install bcmath
-
-# Installation node.js
-RUN curl -sL https://deb.nodesource.com/setup_16.x | bash - && apt-get update
-RUN apt-get install -y nodejs
-RUN apt-get install -y npm
-RUN npm install npm@latest -g
 
 WORKDIR /srv
 
