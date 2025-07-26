@@ -35,3 +35,9 @@
     }
   }
 }
+
+.view-articles.view-display-id-page {
+  div[data-drupal-views-infinite-scroll-content-wrapper] {
+    @apply grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10;
+  }
+}

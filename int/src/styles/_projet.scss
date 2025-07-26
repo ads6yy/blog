@@ -69,3 +69,9 @@
     }
   }
 }
+
+.view-projets.view-display-id-page {
+  div[data-drupal-views-infinite-scroll-content-wrapper] {
+    @apply grid grid-cols-1 gap-10;
+  }
+}

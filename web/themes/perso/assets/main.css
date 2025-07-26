@@ -1446,6 +1446,17 @@ footer nav ul {
   display: flex;
   gap: 1.5rem;
 }
+.pager ul.pager__items {
+  display: flex;
+  justify-content: center;
+}
+.pager ul.pager__items li {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+.pager ul.pager__items li a {
+  border-bottom-width: 0px;
+}
 .card-article {
   display: flex;
   width: 100%;
@@ -1519,6 +1530,23 @@ footer nav ul {
 }
 .card-article:hover .card-img img {
     transform: scale(1.1); }
+.view-articles.view-display-id-page div[data-drupal-views-infinite-scroll-content-wrapper] {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 2.5rem;
+}
+@media (min-width: 768px) {
+
+  .view-articles.view-display-id-page div[data-drupal-views-infinite-scroll-content-wrapper] {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1280px) {
+
+  .view-articles.view-display-id-page div[data-drupal-views-infinite-scroll-content-wrapper] {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
 .card-projet {
   display: grid;
   height: 100%;
@@ -1651,6 +1679,11 @@ footer nav ul {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
   --tw-text-opacity: 1;
   color: rgb(19 34 87 / var(--tw-text-opacity, 1));
+}
+.view-projets.view-display-id-page div[data-drupal-views-infinite-scroll-content-wrapper] {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 2.5rem;
 }
 .hover\:border-0:hover {
   border-width: 0px;

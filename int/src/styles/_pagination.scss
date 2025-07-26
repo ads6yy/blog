@@ -1,0 +1,11 @@
+.pager {
+  ul.pager__items {
+    @apply flex justify-center;
+    li {
+      @apply px-3;
+      a {
+        @apply border-b-0;
+      }
+    }
+  }
+}

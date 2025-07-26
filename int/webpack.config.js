@@ -1,6 +1,7 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const FileManagerPlugin = require('filemanager-webpack-plugin');
 
 const path = require('path');
 
@@ -50,6 +51,15 @@ module.exports = {
 		new MiniCssExtractPlugin({
 			filename: "css/main.css",
 			chunkFilename: "css/[name].chunk.js",
+		}),
+		new FileManagerPlugin({
+			events: {
+				onEnd: {
+					copy: [
+						{ source: './build/css/main.css', destination: '../web/themes/perso/assets/main.css' },
+					],
+				},
+			}
 		}),
 	],
 	resolve: {
