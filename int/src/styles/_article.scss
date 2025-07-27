@@ -3,7 +3,7 @@
   @apply transition-all duration-200 ease-in hover:shadow-2xl;
 
   .card-img {
-    @apply h-3/5 overflow-hidden relative;
+    @apply h-3/5 overflow-hidden relative flex;
     span {
       @apply z-10 absolute bottom-0 left-0 right-0 top-0 aspect-16/9 bg-gradient-to-t from-adsy-tottenham-blue/50;
       @apply transition-all duration-200 ease-in;
@@ -36,7 +36,7 @@
   }
 }
 
-.view-articles.view-display-id-page {
+.view-articles.view-display-id-dev, .view-articles.view-display-id-divers {
   div[data-drupal-views-infinite-scroll-content-wrapper] {
     @apply grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10;
   }

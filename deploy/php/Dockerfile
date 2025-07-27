@@ -22,4 +22,6 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 
 RUN if [ -n "$NON_PROD" ] ; then printf "User-agent: *\nDisallow: /\nNoindex: /\n" > ./web/robots.txt; fi
 
+RUN a2enmod rewrite
+
 CMD ["sudo", "/usr/sbin/apache2ctl", "-D", "FOREGROUND"]

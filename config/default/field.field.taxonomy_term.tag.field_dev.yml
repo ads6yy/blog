@@ -1,0 +1,23 @@
+uuid: f88daea4-3f32-4973-92d7-4fd8abd1cc8d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_dev
+    - taxonomy.vocabulary.tag
+id: taxonomy_term.tag.field_dev
+field_name: field_dev
+entity_type: taxonomy_term
+bundle: tag
+label: Dev
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

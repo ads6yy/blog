@@ -1478,6 +1478,7 @@ footer nav ul {
 }
 .card-article .card-img {
   position: relative;
+  display: flex;
   height: 60%;
   overflow: hidden;
 }
@@ -1530,20 +1531,20 @@ footer nav ul {
 }
 .card-article:hover .card-img img {
     transform: scale(1.1); }
-.view-articles.view-display-id-page div[data-drupal-views-infinite-scroll-content-wrapper] {
+.view-articles.view-display-id-dev div[data-drupal-views-infinite-scroll-content-wrapper], .view-articles.view-display-id-divers div[data-drupal-views-infinite-scroll-content-wrapper] {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 2.5rem;
 }
 @media (min-width: 768px) {
 
-  .view-articles.view-display-id-page div[data-drupal-views-infinite-scroll-content-wrapper] {
+  .view-articles.view-display-id-dev div[data-drupal-views-infinite-scroll-content-wrapper], .view-articles.view-display-id-divers div[data-drupal-views-infinite-scroll-content-wrapper] {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 @media (min-width: 1280px) {
 
-  .view-articles.view-display-id-page div[data-drupal-views-infinite-scroll-content-wrapper] {
+  .view-articles.view-display-id-dev div[data-drupal-views-infinite-scroll-content-wrapper], .view-articles.view-display-id-divers div[data-drupal-views-infinite-scroll-content-wrapper] {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }

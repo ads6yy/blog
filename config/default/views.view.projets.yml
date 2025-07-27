@@ -264,9 +264,10 @@ display:
       path: projets
       menu:
         type: normal
-        title: '</Projets>'
+        title: '💾 </Projets>'
         description: ''
-        weight: 0
+        weight: -48
+        enabled: true
         expanded: false
         menu_name: main
         parent: ''
