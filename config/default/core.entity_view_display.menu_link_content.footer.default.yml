@@ -1,0 +1,28 @@
+uuid: 6bf5e28b-ec7f-4cf8-a35d-4635f84ecdb0
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.menu_link_content.footer.field_icone
+    - system.menu.footer
+id: menu_link_content.footer.default
+targetEntityType: menu_link_content
+bundle: footer
+mode: default
+content:
+  children:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_icone:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  langcode: true

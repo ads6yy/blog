@@ -23,10 +23,9 @@
                 item.in_active_trail ? 'active',
             ] %}
             <li>
-                {{ link(item.title, item.url, { 'class': classes_link }) }}
-                {% if item.below %}
-                    {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
-                {% endif %}
+                <a href="{{ item.url }}" class="w-[24px]">
+                    {{ item.content.field_icone }}
+                </a>
             </li>
         {% endfor %}
         </ul>
