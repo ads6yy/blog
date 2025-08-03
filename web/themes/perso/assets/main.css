@@ -858,18 +858,6 @@ select {
   font-size: 1.5rem;
   line-height: 2rem;
 }
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
-}
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -900,9 +888,6 @@ select {
 }
 .font-semibold {
   font-weight: 600;
-}
-.leading-\[1\.35\] {
-  line-height: 1.35;
 }
 .text-adsy-blue {
   --tw-text-opacity: 1;
@@ -1285,6 +1270,83 @@ a[disabled] {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(243 244 246 / var(--tw-ring-opacity, 1));
 }
+h1 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+@media (min-width: 768px) {
+
+  h1 {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+@media (min-width: 1024px) {
+
+  h1 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+h2 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+@media (min-width: 768px) {
+
+  h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+@media (min-width: 1024px) {
+
+  h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+h3 {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  line-height: 1.15;
+}
+@media (min-width: 768px) {
+
+  h3 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+@media (min-width: 1024px) {
+
+  h3 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+body, p {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+@media (min-width: 768px) {
+
+  body, p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+@media (min-width: 1024px) {
+
+  body, p {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
 body {
   display: flex;
   min-height: 100vh;
@@ -1355,7 +1417,7 @@ header nav {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
 
   header nav {
     flex-direction: row;
@@ -1370,7 +1432,7 @@ header nav ul {
   flex-wrap: wrap;
   gap: 1rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
 
   header nav ul {
     flex-direction: row;
@@ -1751,9 +1813,9 @@ footer nav ul img {
     gap: 2.5rem;
   }
 
-  .md\:text-6xl {
-    font-size: 3.75rem;
-    line-height: 1;
+  .md\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 
   .md\:text-base {
@@ -1765,6 +1827,11 @@ footer nav ul img {
 
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lg\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
   }
 }
 @media (min-width: 1280px) {
