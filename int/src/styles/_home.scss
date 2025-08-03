@@ -3,7 +3,7 @@
   .sous-outils {
     @apply grid grid-cols-3 md:grid-cols-8 items-center justify-items-center gap-2 md:gap-6;
     img {
-      @apply w-12 md:w-16;
+      @apply w-10 md:w-12;
     }
   }
 }

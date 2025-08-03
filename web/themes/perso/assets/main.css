@@ -1546,12 +1546,12 @@ footer nav ul img {
   }
 }
 .outils .sous-outils img {
-  width: 3rem;
+  width: 2.5rem;
 }
 @media (min-width: 768px) {
 
   .outils .sous-outils img {
-    width: 4rem;
+    width: 3rem;
   }
 }
 .card-article {
