@@ -13,12 +13,6 @@
       }
     }
 
-    .logo {
-      img {
-        @apply overflow-hidden rounded-lg;
-      }
-    }
-
     .card-content {
       @apply flex flex-col;
       .titre {
@@ -26,13 +20,6 @@
       }
       .description {
         @apply text-sm;
-      }
-    }
-
-    .tags {
-      @apply flex flex-wrap gap-2 mt-auto;
-      li {
-        @apply text-xs p-2 border border-adsy-tottenham-blue rounded-lg;
       }
     }
   }
@@ -73,5 +60,27 @@
 .view-projets.view-display-id-page {
   div[data-drupal-views-infinite-scroll-content-wrapper] {
     @apply grid grid-cols-1 gap-10;
+  }
+}
+
+.logo {
+  img {
+    @apply overflow-hidden rounded-lg;
+  }
+}
+
+.tags {
+  @apply flex flex-wrap gap-2 mt-auto;
+  li {
+    @apply text-xs p-2 border border-adsy-tottenham-blue rounded-lg;
+  }
+}
+
+.projet-full {
+  .header {
+    @apply flex items-center gap-2;
+    .label {
+      @apply h-fit;
+    }
   }
 }
