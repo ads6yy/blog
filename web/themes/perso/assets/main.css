@@ -1730,6 +1730,8 @@ footer nav ul img {
   overflow: hidden;
   border-radius: 0.5rem;
 }
+.swiper-projets .swiper-slide {
+  padding: 5px 0; }
 .swiper-projets-navigation-container {
   display: flex;
   justify-content: flex-end;
