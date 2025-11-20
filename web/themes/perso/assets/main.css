@@ -1645,6 +1645,13 @@ footer nav ul img {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
+.article-full p {
+  margin: revert; }
+.article-full ul {
+  list-style: revert;
+  margin-left: 16px; }
+.article-full code {
+  overflow: auto; }
 .card-projet {
   display: grid;
   height: 100%;

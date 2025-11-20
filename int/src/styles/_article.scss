@@ -41,3 +41,18 @@
     @apply grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10;
   }
 }
+
+.article-full {
+  p {
+    margin: revert;
+  }
+
+  ul {
+    list-style: revert;
+    margin-left: 16px;
+  }
+
+  code {
+    overflow: auto;
+  }
+}

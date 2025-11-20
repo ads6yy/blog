@@ -1,4 +1,6 @@
-<article {{ attributes }} class="flex flex-col gap-16 py-16">
+{{ attach_library('exmpl_article/article-library') }}
+
+<article {{ attributes }} class="article-full flex flex-col gap-16 py-16">
 
     {{ title_prefix }}
     {% if label %}
