@@ -33,6 +33,9 @@
 
     .screenshot {
       @apply overflow-hidden rounded-lg;
+      img {
+        @apply max-h-[300px] w-auto;
+      }
     }
   }
 }

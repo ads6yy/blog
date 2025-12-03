@@ -1329,6 +1329,25 @@ h3 {
     line-height: 1.75rem;
   }
 }
+h4 {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  line-height: 1.10;
+}
+@media (min-width: 768px) {
+
+  h4 {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+@media (min-width: 1024px) {
+
+  h4 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
 body, p {
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -1736,6 +1755,10 @@ footer nav ul img {
 .card-projet .right-panel .screenshot {
   overflow: hidden;
   border-radius: 0.5rem;
+}
+.card-projet .right-panel .screenshot img {
+  max-height: 300px;
+  width: auto;
 }
 .swiper-projets .swiper-slide {
   padding: 5px 0; }
