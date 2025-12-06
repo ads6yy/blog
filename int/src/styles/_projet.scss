@@ -1,0 +1,91 @@
+.card-projet {
+  @apply grid grid-cols-1 lg:grid-cols-5 gap-x-0 gap-y-5 lg:gap-10 p-4 overflow-hidden border border-adsy-tottenham-blue rounded-lg w-full h-full;
+  @apply transition-all duration-200 ease-in hover:shadow-2xl;
+
+  .left-panel {
+    @apply col-span-2 flex flex-col gap-4;
+
+    .header {
+      @apply flex justify-between;
+
+      button {
+        @apply block lg:hidden;
+      }
+    }
+
+    .card-content {
+      @apply flex flex-col;
+      .titre {
+        @apply flex items-center gap-2;
+      }
+      .description {
+        @apply text-sm;
+      }
+    }
+  }
+
+  .right-panel {
+    @apply col-span-3 flex flex-col gap-4 justify-between;
+
+    button {
+      @apply hidden lg:block;
+    }
+
+    .screenshot {
+      @apply overflow-hidden rounded-lg;
+      img {
+        @apply max-h-[300px] w-auto;
+      }
+    }
+  }
+}
+
+.swiper-projets {
+  .swiper-slide {
+    padding: 5px 0;
+  }
+}
+
+.swiper-projets-navigation-container {
+  @apply flex justify-end gap-4;
+  .swiper-projets-navigation {
+    @apply text-white bg-adsy-tottenham-blue border-adsy-tottenham-blue;
+    @apply w-fit p-2  border rounded-full cursor-pointer;
+
+    svg {
+      @apply size-8;
+    }
+
+    &.swiper-button-disabled {
+      @apply text-adsy-tottenham-blue bg-white;
+    }
+  }
+}
+
+.view-projets.view-display-id-page {
+  div[data-drupal-views-infinite-scroll-content-wrapper] {
+    @apply grid grid-cols-1 gap-10;
+  }
+}
+
+.logo {
+  img {
+    @apply overflow-hidden rounded-lg;
+  }
+}
+
+.tags {
+  @apply flex flex-wrap gap-2 mt-auto;
+  li {
+    @apply text-xs p-2 border border-adsy-tottenham-blue rounded-lg;
+  }
+}
+
+.projet-full {
+  .header {
+    @apply flex items-center gap-2;
+    .label {
+      @apply h-fit;
+    }
+  }
+}

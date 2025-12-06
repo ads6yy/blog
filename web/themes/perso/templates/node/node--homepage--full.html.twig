@@ -1,20 +1,90 @@
-<article{{ attributes }} class="p-2 p-md-5">
-
-    <div{{ content_attributes }} class="ckeditor">
+<article{{ attributes }} class="flex flex-col gap-16 py-16">
+    <!-- Titre -->
+    <h1 class="text-2xl md:text-4xl lg:text-6xl font-bold text-adsy-tottenham-blue leading-[1.35]">
+        Hello();
+        <br>
+        Je suis Adrien “<span class="text-adsy-blue">Adsy</span>” SIMON.
+    </h1>
+    <!-- Description -->
+    <div class="flex flex-col gap-3 text-sm md:text-base">
         {{ content.body }}
     </div>
-
-    <hr/>
-
-    <div class="ckeditor">
-        {{ content.field_introduction_competences }}
+    <!-- Technos -->
+    <div class="outils">
+        <!-- Mains -->
+        <div class="sous-outils">
+            <img src="/{{ directory }}/img/php-icon.png" alt="">
+            <img src="/{{ directory }}/img/symfony-icon.png" alt="">
+            <img src="/{{ directory }}/img/drupal-icon.png" alt="">
+            <img src="/{{ directory }}/img/wordpress-icon.png" alt="">
+            <img src="/{{ directory }}/img/docker-icon.png" alt="">
+        </div>
+        <!-- Ops -->
+        <div class="sous-outils">
+            <img src="/{{ directory }}/img/nginx-icon.png" alt="">
+            <img src="/{{ directory }}/img/apache-icon.png" alt="">
+            <img src="/{{ directory }}/img/mysql-icon.png" alt="">
+            <img src="/{{ directory }}/img/gitlab-icon.png" alt="">
+            <img src="/{{ directory }}/img/git-scm-icon.png" alt="">
+        </div>
+        <!-- Front -->
+        <div class="sous-outils">
+            <img src="/{{ directory }}/img/w3_html5-icon.png" alt="">
+            <img src="/{{ directory }}/img/w3_css-icon.png" alt="">
+            <img src="/{{ directory }}/img/javascript-icon.png" alt="">
+            <img src="/{{ directory }}/img/typescriptlang-icon.png" alt="">
+            <img src="/{{ directory }}/img/reactjs-icon.png" alt="">
+            <img src="/{{ directory }}/img/tailwindcss-icon.png" alt="">
+            <img src="/{{ directory }}/img/nextjs-icon.png" alt="">
+            <img src="/{{ directory }}/img/twig-icon.png" alt="">
+        </div>
     </div>
+    <!-- Derniers articles -->
+    <div class="flex flex-col gap-10">
+        <div class="flex flex-col gap-2 md:flex-row md:justify-between">
+            <h2 class="text-adsy-tottenham-blue">Derniers articles</h2>
+            <a href="{{ url('view.articles.dev') }}" type="button" class="btn btn-md btn-adsy-tottenham-blue btn-fill w-full md:w-fit">
+                <div class="content">
+                    <div class="text">
+                        Tout mes articles
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                    </svg>
+                </div>
+            </a>
+        </div>
 
-    <ul class="nav nav-tabs mb-3" id="ex1" role="tablist">
-        {{ content.field_connaissances_techniques|add_suggestion('connaissances-techniques--domaines') }}
-    </ul>
-    <div class="tab-content">
-        {{ content.field_connaissances_techniques|add_suggestion('connaissances-techniques--competences') }}
+        {{ drupal_view('articles', 'derniers_articles') }}
+
     </div>
-
+    <!-- Projets -->
+    <div class="flex flex-col gap-10">
+        <div class="flex flex-col gap-2 md:flex-row md:justify-between">
+            <h2 class="text-adsy-tottenham-blue">Derniers projets</h2>
+            <a href="{{ url('view.projets.page') }}" type="button" class="btn btn-md btn-adsy-tottenham-blue btn-fill w-full md:w-fit">
+                <div class="content">
+                    <div class="text">
+                        Tout mes projets
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                    </svg>
+                </div>
+            </a>
+        </div>
+        {{ drupal_view('projets', 'derniers_projets') }}
+        <div class="swiper-projets-navigation-container">
+            <div class="swiper-projets-navigation prev">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12l4-4m-4 4 4 4"/>
+                </svg>
+            </div>
+            <div class="swiper-projets-navigation next">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/>
+                </svg>
+            </div>
+        </div>
+    </div>
 </article>

@@ -1,33 +1,19 @@
-<header class='d-flex flex-column align-items-center justify-content-center border-bottom border-secondary border-5'>
-    <a href='{{ url('<front>') }}' class='logo'>
-        <img src='/{{ directory }}/img/logo_adsy.png' class='img-fluid rounded-circle'>
-    </a>
-    {{ page.header }}
-</header>
+{% if page.header %}
+    <header>
+        {{ page.header }}
+    </header>
+{% endif %}
 
 {{ page.breadcrumb }}
 
-<main role="main" class="container py-5">
-    <div class="layout-content">
+<main role="main">
+    <div class="container py-5">
         {{ page.content }}
     </div>
-
-    {% if page.sidebar_first %}
-        <aside class="layout-sidebar-first" role="complementary">
-            {{ page.sidebar_first }}
-        </aside>
-    {% endif %}
-
-    {% if page.sidebar_second %}
-        <aside class="layout-sidebar-second" role="complementary">
-            {{ page.sidebar_second }}
-        </aside>
-    {% endif %}
-
 </main>
 
 {% if page.footer %}
-    <footer role="contentinfo">
+    <footer>
         {{ page.footer }}
     </footer>
 {% endif %}

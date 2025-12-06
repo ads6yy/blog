@@ -9,13 +9,9 @@ global-scripts:
   version: 1.x
   js:
     assets/main.min.js: { }
+    //cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js: { type: external, minified: true }
   dependencies:
     - core/jquery
     - core/jquery.once
     - core/drupal
     - core/drupalSettings
-
-competence:
-  js:
-    js/competence.js: { minified: true }
-    js/progressbar.min.js: { minified: true }
