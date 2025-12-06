@@ -25,6 +25,8 @@
 # Ignore integration files
 .gitattributes
 /integration/node_modules
+/int/node_modules
+/int/build
 /.csslintrc
 /.eslintignore
 /.eslintrc.json

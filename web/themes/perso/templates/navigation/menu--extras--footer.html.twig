@@ -1,0 +1,33 @@
+{% import _self as menus %}
+
+<nav>
+    {{ menus.menu_links(items, attributes, 0) }}
+    <p>
+        © 2025 - Adrien “Adsy” SIMON
+    </p>
+</nav>
+
+{% macro menu_links(items, attributes, menu_level) %}
+    {% import _self as menus %}
+    {% if items %}
+        {% if menu_level == 0 %}
+            <ul>
+        {% else %}
+            <ul>
+        {% endif %}
+        {% for item in items %}
+            {% set classes_link = [
+                'link link-white',
+                item.is_expanded ? 'dropdown-toggle',
+                item.is_collapsed ? 'dropdown-toggle',
+                item.in_active_trail ? 'active',
+            ] %}
+            <li>
+                <a href="{{ item.url }}" class="w-[24px]">
+                    {{ item.content.field_icone }}
+                </a>
+            </li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+{% endmacro %}
