@@ -11,7 +11,7 @@ dependencies:
 _core:
   default_config_hash: diywn6VdMoQOlDA-xslKdKrDko3SsTKfaK3WBG45UAg
 id: media
-label: Media
+label: Média
 module: views
 description: 'Find and manage media.'
 tag: ''
@@ -24,7 +24,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: Media
+      title: Média
       fields:
         media_bulk_form:
           id: media_bulk_form
@@ -89,7 +89,7 @@ display:
           entity_type: media
           entity_field: thumbnail
           plugin_id: field
-          label: Thumbnail
+          label: Vignette
           exclude: false
           alter:
             alter_text: false
@@ -269,7 +269,7 @@ display:
           entity_type: media
           entity_field: uid
           plugin_id: field
-          label: Author
+          label: Auteur
           exclude: false
           alter:
             alter_text: false
@@ -334,7 +334,7 @@ display:
           entity_type: media
           entity_field: status
           plugin_id: field
-          label: Status
+          label: État
           exclude: false
           alter:
             alter_text: false
@@ -476,7 +476,7 @@ display:
           admin_label: ''
           entity_type: media
           plugin_id: entity_operations
-          label: Operations
+          label: Actions
           exclude: false
           alter:
             alter_text: false
@@ -772,7 +772,7 @@ display:
           exposed: true
           expose:
             operator_id: langcode_op
-            label: Language
+            label: Langue
             description: ''
             use_operator: false
             operator: langcode_op
@@ -887,7 +887,7 @@ display:
       tags: {  }
   media_page_list:
     id: media_page_list
-    display_title: Media
+    display_title: Média
     display_plugin: page
     position: 1
     display_options:
@@ -896,7 +896,7 @@ display:
       path: admin/content/media
       menu:
         type: tab
-        title: Media
+        title: Média
         description: ''
         weight: 0
         expanded: false

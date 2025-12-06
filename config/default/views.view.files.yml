@@ -66,7 +66,7 @@ display:
           entity_type: file
           entity_field: filename
           plugin_id: field
-          label: Name
+          label: Nom
           exclude: false
           alter:
             alter_text: false
@@ -233,7 +233,7 @@ display:
           entity_type: file
           entity_field: status
           plugin_id: field
-          label: Status
+          label: État
           exclude: false
           alter:
             alter_text: false
@@ -609,7 +609,7 @@ display:
           exposed: true
           expose:
             operator_id: status_op
-            label: Status
+            label: État
             description: ''
             use_operator: false
             operator: status_op
@@ -850,7 +850,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: standard
-          label: 'Entity type'
+          label: "Type d'entité"
           exclude: false
           alter:
             alter_text: false

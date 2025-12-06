@@ -29,7 +29,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: Media
+      title: Média
       fields:
         media_bulk_form:
           id: media_bulk_form
@@ -295,7 +295,7 @@ display:
           exposed: true
           expose:
             operator_id: name_op
-            label: Name
+            label: Nom
             description: ''
             use_operator: false
             operator: name_op
@@ -418,7 +418,7 @@ display:
           exposed: true
           expose:
             operator_id: langcode_op
-            label: Language
+            label: Langue
             description: ''
             use_operator: false
             operator: langcode_op
@@ -655,7 +655,7 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          text: Edit
+          text: Modifier
           output_url_as_text: false
           absolute: false
         delete_media:
@@ -708,7 +708,7 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          text: Delete
+          text: Supprimer
           output_url_as_text: false
           absolute: false
         rendered_entity:
@@ -987,7 +987,7 @@ display:
           exposed: true
           expose:
             operator_id: name_op
-            label: Name
+            label: Nom
             description: ''
             use_operator: false
             operator: name_op
@@ -1119,7 +1119,7 @@ display:
           entity_type: media
           entity_field: thumbnail
           plugin_id: field
-          label: Thumbnail
+          label: Vignette
           type: image
           settings:
             image_link: ''
@@ -1134,7 +1134,7 @@ display:
           entity_type: media
           entity_field: name
           plugin_id: field
-          label: Name
+          label: Nom
           type: string
           settings:
             link_to_entity: false
@@ -1146,7 +1146,7 @@ display:
           entity_type: media
           entity_field: uid
           plugin_id: field
-          label: Author
+          label: Auteur
           type: entity_reference_label
           settings:
             link: true
@@ -1275,7 +1275,7 @@ display:
           exposed: true
           expose:
             operator_id: name_op
-            label: Name
+            label: Nom
             description: ''
             use_operator: false
             operator: name_op

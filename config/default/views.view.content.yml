@@ -8,7 +8,7 @@ dependencies:
 _core:
   default_config_hash: vBKWYGGDoAX-tFd1JErB8tZLSxx3lJ0foouVsgpcbB4
 id: content
-label: Content
+label: Contenu
 module: node
 description: 'Find and manage content.'
 tag: default
@@ -21,7 +21,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: Content
+      title: Contenu
       fields:
         node_bulk_form:
           id: node_bulk_form
@@ -46,7 +46,7 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: field
-          label: Title
+          label: Titre
           exclude: false
           alter:
             alter_text: false
@@ -69,7 +69,7 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: field
-          label: 'Content type'
+          label: 'Type de contenu'
           exclude: false
           alter:
             alter_text: false
@@ -132,7 +132,7 @@ display:
           entity_type: user
           entity_field: name
           plugin_id: field
-          label: Author
+          label: Auteur
           exclude: false
           alter:
             alter_text: false
@@ -150,7 +150,7 @@ display:
           entity_type: node
           entity_field: status
           plugin_id: field
-          label: Status
+          label: État
           exclude: false
           alter:
             alter_text: false
@@ -204,7 +204,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: entity_operations
-          label: Operations
+          label: Actions
           exclude: false
           alter:
             alter_text: false
@@ -299,7 +299,7 @@ display:
           exposed: true
           expose:
             operator_id: title_op
-            label: Title
+            label: Titre
             description: ''
             use_operator: false
             operator: title_op
@@ -339,7 +339,7 @@ display:
           exposed: true
           expose:
             operator_id: type_op
-            label: 'Content type'
+            label: 'Type de contenu'
             description: ''
             use_operator: false
             operator: type_op
@@ -380,7 +380,7 @@ display:
           exposed: true
           expose:
             operator_id: ''
-            label: Status
+            label: État
             description: ''
             use_operator: false
             operator: status_op
@@ -428,7 +428,7 @@ display:
           exposed: true
           expose:
             operator_id: langcode_op
-            label: Language
+            label: Langue
             description: ''
             use_operator: false
             operator: langcode_op
@@ -598,14 +598,14 @@ display:
       path: admin/content/node
       menu:
         type: 'default tab'
-        title: Content
+        title: Contenu
         description: ''
         weight: -10
         menu_name: admin
         context: ''
       tab_options:
         type: normal
-        title: Content
+        title: Contenu
         description: 'Find and manage content'
         weight: -10
         menu_name: admin
