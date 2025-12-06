@@ -1,0 +1,19 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import "fonts";
+@import "links";
+@import "buttons";
+@import "text";
+
+@import "layout";
+@import "header";
+@import "footer";
+@import "pagination";
+
+@import "home";
+@import "article";
+@import "projet";
+
+@config "../../tailwind.config.js"

@@ -1,4 +1,4 @@
-FROM php:8.1-apache as client_php
+FROM php:8.4-apache as client_php
 
 ENV \
     COMPOSER_ALLOW_SUPERUSER=1 \
@@ -15,17 +15,13 @@ RUN  docker-php-ext-configure gd --with-freetype=/usr/include/ --with-jpeg=/usr/
      && docker-php-ext-enable pdo pdo_mysql opcache zip \
      && docker-php-ext-install bcmath
 
-# Installation node.js
-RUN curl -sL https://deb.nodesource.com/setup_16.x | bash - && apt-get update
-RUN apt-get install -y nodejs
-RUN apt-get install -y npm
-RUN npm install npm@latest -g
-
 WORKDIR /srv
 
 # Install Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 RUN if [ -n "$NON_PROD" ] ; then printf "User-agent: *\nDisallow: /\nNoindex: /\n" > ./web/robots.txt; fi
+
+RUN a2enmod rewrite
 
 CMD ["sudo", "/usr/sbin/apache2ctl", "-D", "FOREGROUND"]

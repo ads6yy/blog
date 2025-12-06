@@ -1,0 +1,123 @@
+.btn {
+  @apply cursor-pointer inline-flex appearance-none items-center justify-center border text-center transition-all duration-500 ease-in-out rounded-xl;
+  .content {
+    @apply flex;
+  }
+}
+
+.btn-fill {
+  @apply bg-adsy-tottenham-blue border-adsy-tottenham-blue text-white;
+  &:hover {
+    @apply bg-adsy-tottenham-blue border-adsy-tottenham-blue text-white;
+  }
+  &:focus {
+    @apply ring ring-gray-100;
+  }
+}
+.btn-outline {
+  @apply bg-white border-adsy-tottenham-blue text-adsy-tottenham-blue;
+  &:hover {
+    @apply bg-adsy-tottenham-blue border-adsy-tottenham-blue text-white;
+  }
+  &:focus {
+    @apply ring ring-gray-100;
+  }
+}
+
+.btn-sm {
+  @apply min-h-7 text-sm font-normal py-1 px-2;
+  .content {
+    @apply gap-1;
+  }
+  .icon {
+    @apply h-4 w-4 stroke-current stroke-1;
+  }
+}
+.btn-md {
+  @apply min-h-8 text-base font-normal py-1 px-3;
+  .content {
+    @apply gap-2;
+  }
+  .icon {
+    @apply h-5 w-5 stroke-current stroke-1;
+  }
+}
+.btn-lg {
+  @apply min-h-10 text-lg font-normal py-2 px-3;
+  .content {
+    @apply gap-2;
+  }
+  .icon {
+    @apply h-6 w-6 stroke-current stroke-1;
+  }
+}
+.btn-xl {
+  @apply min-h-12 text-xl font-normal py-2 px-4;
+  .content {
+    @apply gap-2;
+  }
+  .icon {
+    @apply h-6 w-6 stroke-current stroke-1;
+  }
+}
+
+.btn-adsy-light-blue {
+  @apply bg-adsy-light-blue border-adsy-light-blue text-white;
+  &:hover {
+    @apply bg-adsy-light-blue border-adsy-light-blue text-white;
+  }
+  &.btn-outline {
+    @apply bg-white border-adsy-light-blue text-adsy-light-blue;
+    &:hover {
+      @apply bg-adsy-light-blue border-adsy-light-blue text-white;
+    }
+    &:focus {
+      @apply ring ring-gray-100;
+    }
+  }
+}
+.btn-adsy-blue {
+  @apply bg-adsy-blue border-adsy-blue text-white;
+  &:hover {
+    @apply bg-adsy-blue border-adsy-blue text-white;
+  }
+  &.btn-outline {
+    @apply bg-white border-adsy-blue text-adsy-blue;
+    &:hover {
+      @apply bg-adsy-blue border-adsy-blue text-white;
+    }
+    &:focus {
+      @apply ring ring-gray-100;
+    }
+  }
+}
+.btn-adsy-tottenham-blue {
+  @apply bg-adsy-tottenham-blue border-adsy-tottenham-blue text-white;
+  &:hover {
+    @apply bg-adsy-tottenham-blue border-adsy-tottenham-blue text-white;
+  }
+  &.btn-outline {
+    @apply bg-white border-adsy-tottenham-blue text-adsy-tottenham-blue;
+    &:hover {
+      @apply bg-adsy-tottenham-blue border-adsy-tottenham-blue text-white;
+    }
+    &:focus {
+      @apply ring ring-gray-100;
+    }
+  }
+}
+.btn-adsy-dark-blue {
+  @apply bg-adsy-dark-blue border-adsy-dark-blue text-white;
+  &:hover {
+    @apply bg-adsy-dark-blue border-adsy-dark-blue text-white;
+  }
+  &.btn-outline {
+    @apply bg-white border-adsy-dark-blue text-adsy-dark-blue;
+    &:hover {
+      @apply bg-adsy-dark-blue border-adsy-dark-blue text-white;
+    }
+    &:focus {
+      @apply ring ring-gray-100;
+    }
+  }
+}

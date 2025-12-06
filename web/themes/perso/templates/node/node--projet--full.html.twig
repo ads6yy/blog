@@ -1,0 +1,31 @@
+<article {{ attributes }} class="projet-full flex flex-col gap-16 py-16">
+
+    <div class="header">
+        <div class="logo flex" style="width: 100px;">
+            {{ content.field_logo }}
+        </div>
+        <div class="title">
+            {% if label %}
+                <h1 class="text-adsy-tottenham-blue">
+                    {{ label }}
+                </h1>
+            {% endif %}
+        </div>
+    </div>
+
+    {% if display_submitted %}
+        <div{{ author_attributes }} class="fst-italic">
+            {% trans %}Submitted on{% endtrans %} {{ node.getCreatedTime()|date("d/m/Y") }}
+            {{ metadata }}
+        </div>
+    {% endif %}
+
+    <ul class="tags">
+        {{ content.field_tags }}
+    </ul>
+
+    <div{{ content_attributes }}>
+        {{ content.body }}
+    </div>
+
+</article>

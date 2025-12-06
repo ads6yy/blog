@@ -1,32 +1,9 @@
-<article{{ attributes }} class="col-12 col-md-4 pe-md-5 pb-5">
-    <a href="{{ url }}" class="text-decoration-none">
-        <div class="card">
-            <img class="card-img-top"
-                 src="https://loremflickr.com/1000/500/landscape?random={{ node.id() }}"
-                 alt="random img"
-            >
-
-            <div class="card-body">
-                <div class="card-title">
-                    {{ title_prefix }}
-                    {% if label %}
-                        <h3 class="fw-bold fw-rubik">
-                            {{ label }}
-                        </h3>
-                    {% endif %}
-                    {{ title_suffix }}
-                </div>
-
-                <div class="card-text">
-                    {% if display_submitted %}
-                        <div{{ author_attributes }} class="fst-italic">
-                            {% trans %}Submitted on{% endtrans %} {{ node.getCreatedTime()|date("d/m/Y") }}
-                            {{ metadata }}
-                        </div>
-                    {% endif %}
-                </div>
-            </div>
-
-        </div>
-    </a>
-</article>
+<a href="{{ url }}" class="card-article">
+    <div class="card-img">
+        {{ content.field_vignette }}
+    </div>
+    <div class="card-content">
+        <span class="date">{{ node.getCreatedTime()|date('d/m/Y') }}</span>
+        <h3>{{ label }}</h3>
+    </div>
+</a>

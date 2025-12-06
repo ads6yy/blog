@@ -1,0 +1,12 @@
+footer {
+  @apply bg-adsy-tottenham-blue;
+  nav {
+    @apply container flex flex-col gap-2 items-center py-5 text-white;
+    ul {
+      @apply flex gap-6;
+      img {
+        @apply w-6 h-6;
+      }
+    }
+  }
+}
