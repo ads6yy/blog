@@ -49,8 +49,6 @@ jobs:
           RSYNC_EXCLUDES=(
             --exclude='.git'
             --exclude='.github'
-            --exclude='vendor'
-            --exclude='node_modules'
             --exclude='web/sites/default/files'
             --exclude='web/sites/default/settings.php'
             --exclude='deploy'
@@ -74,44 +72,6 @@ jobs:
         run: |
           ssh -p ${REMOTE_PORT:-22} ${REMOTE_USER}@${REMOTE_HOST} "set -e
             cd ${REMOTE_PATH}
-
-            # Install PHP deps on the server (no scripts to reduce side-effects)
             composer install --no-dev --prefer-dist --optimize-autoloader --no-interaction --no-scripts
-
-            # Simple, best-effort permission fixes (won't fail if permission changes are not allowed)
-            #  - vendor directories: 2755 (setgid so new files inherit group)
-            #  - vendor files: 0644
-            #  - vendor/bin scripts: 0755
-            if [ -d vendor ]; then
-              find vendor -type d -exec chmod 2755 {} \; || true
-              find vendor -type f -exec chmod 0644 {} \; || true
-              if [ -d vendor/bin ]; then
-                find vendor/bin -type f -exec chmod 0755 {} \; || true
-              fi
-            fi
-
-            # Ensure uploads dir exists and is group-writable (best-effort)
-            mkdir -p web/sites/default/files || true
-            chmod -R 2775 web/sites/default/files || true
-
-            # Protect settings.php (best-effort)
-            if [ -f web/sites/default/settings.php ]; then
-              chmod 0440 web/sites/default/settings.php || true
-            fi
-
-            # Ensure drush wrapper is executable; fallback to php invocation if needed
-            if [ -f vendor/bin/drush ]; then
-              chmod +x vendor/bin/drush || true
-            fi
-
-            if [ -x vendor/bin/drush ]; then
-              vendor/bin/drush deploy -y
-            else
-              if [ -f vendor/drush/drush/drush ]; then
-                php vendor/drush/drush/drush deploy -y
-              else
-                echo 'ERROR: drush not found' >&2
-                exit 2
-              fi
-            fi
+            vendor/bin/drush deploy -y
           "
