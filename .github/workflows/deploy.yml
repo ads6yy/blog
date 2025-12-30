@@ -71,6 +71,14 @@ jobs:
         run: |
           ssh -p ${REMOTE_PORT:-22} ${REMOTE_USER}@${REMOTE_HOST} "set -e
             cd ${REMOTE_PATH}
-            composer install --no-dev --prefer-dist --optimize-autoloader --no-scripts
+
+            # install dependencies on the server
+            composer install --no-dev --prefer-dist --optimize-autoloader --no-scripts --no-interaction
+
+            # ensure vendor/bin/drush is executable; if chmod fails keep going
+            if [ -f vendor/bin/drush ]; then
+              chmod +x vendor/bin/drush || true
+            fi
+
             vendor/bin/drush deploy -y
           "
