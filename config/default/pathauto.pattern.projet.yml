@@ -1,22 +1,22 @@
-uuid: ccf34700-01f5-431f-af23-407b891fcdfe
+uuid: f8d06aa3-7028-4a1f-89b2-7fa5706165f3
 langcode: fr
 status: true
 dependencies:
   module:
     - node
-id: article
-label: Article
+id: projet
+label: Projet
 type: 'canonical_entities:node'
-pattern: '/articles/[node:title]'
+pattern: '/projets/[node:title]'
 selection_criteria:
-  72e159e2-0db6-401c-bd96-f133e0a8df01:
+  a75a1d01-5719-487d-8566-1e813782df31:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 72e159e2-0db6-401c-bd96-f133e0a8df01
+    uuid: a75a1d01-5719-487d-8566-1e813782df31
     context_mapping:
       node: node
     bundles:
-      article: article
+      projet: projet
 selection_logic: and
 weight: -5
 relationships: {  }

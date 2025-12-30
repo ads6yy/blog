@@ -55,6 +55,7 @@ jobs:
             --exclude='web/sites/default/settings.php'
             --exclude='deploy'
             --exclude='int'
+            --exclude='public_html/.htaccess' # explicit public_html root protection
           )
 
           rsync -avz --delete "${RSYNC_EXCLUDES[@]}" \
