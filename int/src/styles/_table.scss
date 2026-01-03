@@ -1,0 +1,26 @@
+table {
+  @apply block w-full overflow-x-auto border-separate border-spacing-0 border border-gray-200 rounded-lg bg-white;
+
+  display: grid !important;
+  grid-template-columns: repeat(var(--col-count, 3), minmax(max-content, 1fr));
+
+  thead, tbody, tr {
+    display: contents;
+  }
+
+  th, td {
+    @apply px-3 py-1 text-left text-sm text-adsy-tottenham-blue border-r border-b border-gray-200;
+
+    &:last-child {
+      @apply border-r-0;
+    }
+  }
+
+  thead th {
+    @apply bg-gray-50 text-xs font-semibold uppercase tracking-wider sticky top-0;
+  }
+
+  tbody tr:last-child td {
+    @apply border-b-0;
+  }
+}

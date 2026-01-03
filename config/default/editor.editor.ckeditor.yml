@@ -28,6 +28,8 @@ settings:
       - bulletedList
       - numberedList
       - horizontalLine
+      - insertTable
+      - showBlocks
       - '|'
       - drupalInsertImage
       - drupalMedia
