@@ -1882,6 +1882,13 @@ footer nav ul img {
   height: -moz-fit-content;
   height: fit-content;
 }
+.projet-full p {
+  margin: revert; }
+.projet-full ul {
+  list-style: revert;
+  margin-left: 16px; }
+.projet-full code {
+  overflow: auto; }
 .hover\:border-0:hover {
   border-width: 0px;
 }

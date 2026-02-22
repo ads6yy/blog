@@ -88,4 +88,17 @@
       @apply h-fit;
     }
   }
+
+  p {
+    margin: revert;
+  }
+
+  ul {
+    list-style: revert;
+    margin-left: 16px;
+  }
+
+  code {
+    overflow: auto;
+  }
 }
