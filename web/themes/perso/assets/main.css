@@ -1884,7 +1884,7 @@ footer nav ul img {
 }
 .projet-full p {
   margin: revert; }
-.projet-full ul {
+.projet-full ul:not(.tags) {
   list-style: revert;
   margin-left: 16px; }
 .projet-full code {

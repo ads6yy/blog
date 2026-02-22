@@ -93,7 +93,7 @@
     margin: revert;
   }
 
-  ul {
+  ul:not(.tags) {
     list-style: revert;
     margin-left: 16px;
   }
