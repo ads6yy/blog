@@ -1,7 +1,6 @@
 name: perso
 type: theme
 description: 'Theme site perso'
-core: 8.x
 core_version_requirement: ^8 || ^9 || ^10 || ^11
 base theme: stark
 libraries:
