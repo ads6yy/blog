@@ -8,10 +8,7 @@ global-styling:
 global-scripts:
   version: 1.x
   js:
-    assets/main.min.js: { }
-    //cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js: { type: external, minified: true }
+    assets/main.js: { }
   dependencies:
-    - core/jquery
-    - core/jquery.once
     - core/drupal
     - core/drupalSettings

@@ -57,6 +57,7 @@ module.exports = {
 				onEnd: {
 					copy: [
 						{ source: './build/css/main.css', destination: '../web/themes/perso/assets/main.css' },
+						{ source: './build/js/app.js', destination: '../web/themes/perso/assets/main.js' },
 					],
 				},
 			}
