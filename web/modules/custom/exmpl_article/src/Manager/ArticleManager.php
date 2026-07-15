@@ -16,27 +16,22 @@ class ArticleManager {
   }
 
   /**
-   * @return int|null
+   * @param \Drupal\taxonomy\TermInterface $drupalTagTerm
+   *
+   * @return int
    * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
    * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
    */
-  public function countDrupalArticles(): ?int {
-    $drupalTagTerm = $this->getDrupalTagTerm();
+  public function countDrupalArticles(TermInterface $drupalTagTerm): int {
+    $drupalArticlesQuery = $this->entityTypeManager->getStorage('node')
+      ->getQuery()
+      ->accessCheck(FALSE);
+    $drupalArticlesQuery->condition('type', ArticleHelper::BUNDLE)
+      ->condition(ArticleHelper::TAG_FIELD_NAME, $drupalTagTerm->id())
+      ->condition('status', TRUE);
+    $drupalArticlesQueryResult = $drupalArticlesQuery->execute();
 
-    if ($drupalTagTerm instanceof TermInterface) {
-      $drupalArticlesQuery = $this->entityTypeManager->getStorage('node')
-        ->getQuery()
-        ->accessCheck(FALSE);
-      $drupalArticlesQuery->condition('type', ArticleHelper::BUNDLE)
-        ->condition(ArticleHelper::TAG_FIELD_NAME, $drupalTagTerm->id())
-        ->condition('status', TRUE);
-      $drupalArticlesQueryResult = $drupalArticlesQuery->execute();
-
-      return count($drupalArticlesQueryResult);
-    }
-    else {
-      return NULL;
-    }
+    return count($drupalArticlesQueryResult);
   }
 
   /**
