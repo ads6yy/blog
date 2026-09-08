@@ -5,17 +5,28 @@ on:
         description: 'Branch or ref to deploy'
         required: true
         default: 'main'
+  # Automatic deploy once the CI workflow completes on main.
+  workflow_run:
+    workflows: ["CI"]
+    types:
+      - completed
+    branches:
+      - main
 
-name: Manual deploy to remote server
+name: Deploy to remote server
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    # Manual runs always deploy; automatic runs only when CI succeeded.
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      github.event.workflow_run.conclusion == 'success'
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.inputs.ref }}
+          ref: ${{ github.event.inputs.ref || github.event.workflow_run.head_sha || 'main' }}
 
       - name: Ensure rsync/ssh available
         run: sudo apt-get update && sudo apt-get install -y rsync openssh-client
