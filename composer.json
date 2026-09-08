@@ -55,7 +55,7 @@
       "phpstan/extension-installer": true,
       "dealerdirect/phpcodesniffer-composer-installer": true,
       "cweagans/composer-patches": true,
-      "symfony/runtime": false
+      "symfony/runtime": true
     },
     "sort-packages": true
   },
