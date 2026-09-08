@@ -1,0 +1,26 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended"
+  ],
+  "labels": ["dependencies"],
+  "minimumReleaseAge": "3 days",
+  "prConcurrentLimit": 10,
+  "prHourlyLimit": 2,
+  "packageRules": [
+    {
+      "description": "Group Drupal core packages into a single PR",
+      "matchPackageNames": [
+        "drupal/core-recommended",
+        "drupal/core-composer-scaffold",
+        "drupal/core-project-message"
+      ],
+      "groupName": "Drupal core"
+    },
+    {
+      "description": "Group the int/ frontend build dependencies",
+      "matchFileNames": ["int/package.json"],
+      "groupName": "frontend build"
+    }
+  ]
+}

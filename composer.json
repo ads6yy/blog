@@ -47,7 +47,8 @@
       "drupal/core-project-message": true,
       "phpstan/extension-installer": true,
       "dealerdirect/phpcodesniffer-composer-installer": true,
-      "cweagans/composer-patches": true
+      "cweagans/composer-patches": true,
+      "symfony/runtime": false
     },
     "sort-packages": true
   },
@@ -120,6 +121,7 @@
     }
   },
   "require-dev": {
-    "drupal/coder": "^9.0"
+    "drupal/coder": "^9.0",
+    "mglaman/phpstan-drupal": "^2.1"
   }
 }

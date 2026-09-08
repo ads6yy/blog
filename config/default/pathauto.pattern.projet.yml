@@ -2,6 +2,8 @@ uuid: f8d06aa3-7028-4a1f-89b2-7fa5706165f3
 langcode: fr
 status: true
 dependencies:
+  config:
+    - node.type.projet
   module:
     - node
 id: projet
@@ -12,7 +14,6 @@ selection_criteria:
   a75a1d01-5719-487d-8566-1e813782df31:
     id: 'entity_bundle:node'
     negate: false
-    uuid: a75a1d01-5719-487d-8566-1e813782df31
     context_mapping:
       node: node
     bundles:

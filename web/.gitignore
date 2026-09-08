@@ -5,3 +5,4 @@
 /.htaccess
 /autoload.php
 /example.gitignore
+/autoload_runtime.php
