@@ -1,0 +1,58 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  php:
+    name: PHP lint & static analysis
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          tools: composer:v2
+          coverage: none
+
+      - name: Validate composer.json
+        run: composer validate --strict
+
+      - name: Install Composer dependencies
+        run: composer install --no-interaction --no-progress --prefer-dist
+
+      - name: PHP CodeSniffer (Drupal / DrupalPractice)
+        run: vendor/bin/phpcs --standard=phpcs.xml.dist
+
+      - name: PHPStan (Drupal, level 1)
+        run: vendor/bin/phpstan analyse --configuration=phpstan.neon.dist --no-progress
+
+  frontend:
+    name: Frontend build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: int/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: int
+
+      - name: Build assets
+        run: npm run build
+        working-directory: int

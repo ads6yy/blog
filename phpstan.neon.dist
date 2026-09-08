@@ -1,0 +1,19 @@
+includes:
+  - vendor/mglaman/phpstan-drupal/extension.neon
+  - vendor/mglaman/phpstan-drupal/rules.neon
+
+parameters:
+  level: 1
+  paths:
+    - web/modules/custom
+    - web/themes/perso
+  excludePaths:
+    - web/themes/perso/node_modules/*
+    - web/themes/perso/assets/*
+    - web/themes/perso/build/*
+  fileExtensions:
+    - php
+    - module
+    - inc
+    - install
+    - theme

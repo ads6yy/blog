@@ -1,6 +1,13 @@
 <?php
 
 /**
+ * @file
+ * Hook implementations for the Luna Code Snippet module.
+ */
+
+use Drupal\ckeditor5\Plugin\CKEditor5PluginDefinition;
+
+/**
  * Implements hook_ckeditor5_plugin_info_alter().
  */
 function lunacodesnippet_ckeditor5_plugin_info_alter(array &$plugin_definitions) {
@@ -11,6 +18,6 @@ function lunacodesnippet_ckeditor5_plugin_info_alter(array &$plugin_definitions)
       'language' => 'yaml',
       'label' => 'YAML',
     ];
-    $plugin_definitions['ckeditor5_codeBlock'] = new \Drupal\ckeditor5\Plugin\CKEditor5PluginDefinition($codeEditorPlugin);
+    $plugin_definitions['ckeditor5_codeBlock'] = new CKEditor5PluginDefinition($codeEditorPlugin);
   }
 }

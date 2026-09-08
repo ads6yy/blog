@@ -2,7 +2,7 @@
 
 /**
  * @file
- * perso theme file.
+ * Perso theme file.
  */
 
 /**
@@ -14,7 +14,7 @@ function perso_preprocess_field(&$variables): void {
   if (isset($variables['element']['#field_type'])
     && $variables['element']['#field_type'] === 'entity_reference_revisions') {
 
-    foreach($variables['items'] as $idx => $item) {
+    foreach ($variables['items'] as $idx => $item) {
       $variables['items'][$idx]['content']['#paragraph']->index = $idx;
     }
   }
