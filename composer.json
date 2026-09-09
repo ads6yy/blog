@@ -74,6 +74,9 @@
     "drupal-scaffold": {
       "locations": {
         "web-root": "web/"
+      },
+      "file-mapping": {
+        "[web-root]/index.php": false
       }
     },
     "installer-types": [
