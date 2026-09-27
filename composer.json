@@ -33,6 +33,8 @@
     "drupal/metatag": "^2.2",
     "drupal/paragraphs": "^1",
     "drupal/pathauto": "^1",
+    "drupal/redirect": "^1",
+    "drupal/simple_sitemap": "^4",
     "drupal/twig_tweak": "^3.4",
     "drupal/upgrade_status": "^4.3",
     "drupal/views_infinite_scroll": "^2",

@@ -9,3 +9,8 @@ label: "Page d'accueil"
 tags:
   canonical_url: '[site:url]'
   shortlink: '[site:url]'
+  description: 'Portfolio et blog technique : articles sur PHP, Symfony, Drupal et projets de développement.'
+  og_type: website
+  og_title: '[site:name]'
+  og_description: 'Portfolio et blog technique : articles sur PHP, Symfony, Drupal et projets de développement.'
+  og_url: '[site:url]'

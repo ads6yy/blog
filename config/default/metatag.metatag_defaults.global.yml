@@ -10,3 +10,7 @@ tags:
   canonical_url: '[current-page:url]'
   robots: 'index, follow'
   title: '[current-page:title] | [site:name]'
+  og_site_name: '[site:name]'
+  og_type: website
+  og_url: '[current-page:url]'
+  og_title: '[current-page:title]'
