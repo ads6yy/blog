@@ -52,16 +52,18 @@ module.exports = {
 			filename: "css/main.css",
 			chunkFilename: "css/[name].chunk.js",
 		}),
-		new FileManagerPlugin({
-			events: {
-				onEnd: {
-					copy: [
-						{ source: './build/css/main.css', destination: '../web/themes/perso/assets/main.css' },
-						{ source: './build/js/app.js', destination: '../web/themes/perso/assets/main.js' },
-					],
-				},
-			}
-		}),
+    ...(process.env.WEBPACK_SERVE ? [] : [
+			new FileManagerPlugin({
+				events: {
+					onEnd: {
+						copy: [
+							{ source: './build/css/main.css', destination: '../web/themes/perso/assets/main.css' },
+							{ source: './build/js/app.js', destination: '../web/themes/perso/assets/main.js' },
+						],
+					},
+				}
+			}),
+		]),
 	],
 	resolve: {
 		alias: {
@@ -91,7 +93,14 @@ module.exports = {
 						},
 					},
 					"postcss-loader",
-					"sass-loader",
+					{
+						loader: "sass-loader",
+						options: {
+							sassOptions: {
+								silenceDeprecations: ['import'],
+							},
+						},
+					},
 				],
 			},
 		],
