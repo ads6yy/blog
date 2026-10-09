@@ -59,6 +59,9 @@
       "cweagans/composer-patches": true,
       "symfony/runtime": true
     },
+    "platform": {
+      "php": "8.5"
+    },
     "sort-packages": true
   },
   "autoload": {

@@ -1,4 +1,4 @@
-FROM php:8.4-apache as client_php
+FROM php:8.5-apache AS client_php
 
 ENV \
     COMPOSER_ALLOW_SUPERUSER=1 \
@@ -11,8 +11,8 @@ RUN apt-get update \
 RUN  docker-php-ext-configure gd --with-freetype=/usr/include/ --with-jpeg=/usr/include/ --with-webp=/usr/include/ --with-avif \
      && docker-php-ext-install gd \
      && :\
-     && docker-php-ext-install pdo pdo_mysql opcache zip \
-     && docker-php-ext-enable pdo pdo_mysql opcache zip \
+     && docker-php-ext-install pdo pdo_mysql zip \
+     && docker-php-ext-enable pdo pdo_mysql zip \
      && docker-php-ext-install bcmath
 
 WORKDIR /srv

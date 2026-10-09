@@ -1,1 +1,1 @@
-FROM mariadb as client_db
+FROM mariadb AS client_db
