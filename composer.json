@@ -1,12 +1,12 @@
 {
-  "name": "drupal/recommended-project",
-  "description": "Project template for Drupal projects with a relocated document root",
+  "name": "adsy/blog",
+  "description": "Source code for adsy.dev, a personal blog and portfolio built with Drupal.",
   "type": "project",
   "license": "GPL-2.0-or-later",
-  "homepage": "https://www.drupal.org/project/drupal",
+  "homepage": "https://adsy.dev/",
   "support": {
-    "docs": "https://www.drupal.org/docs/user_guide/en/index.html",
-    "chat": "https://www.drupal.org/node/314178"
+    "source": "https://github.com/ADSYSAMA/blog",
+    "issues": "https://github.com/ADSYSAMA/blog/issues"
   },
   "repositories": [
     {
