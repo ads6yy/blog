@@ -6,9 +6,9 @@ ENV \
 
 
 RUN apt-get update \
-    && apt-get install -y libfreetype6-dev libjpeg62-turbo-dev libpng-dev wget git libzip-dev unzip python-is-python3 sudo default-mysql-client libwebp-dev
+    && apt-get install -y libfreetype6-dev libjpeg62-turbo-dev libpng-dev wget git libzip-dev unzip python-is-python3 sudo default-mysql-client libwebp-dev libavif-dev
 
-RUN  docker-php-ext-configure gd --with-freetype=/usr/include/ --with-jpeg=/usr/include/ --with-webp=/usr/include/ \
+RUN  docker-php-ext-configure gd --with-freetype=/usr/include/ --with-jpeg=/usr/include/ --with-webp=/usr/include/ --with-avif \
      && docker-php-ext-install gd \
      && :\
      && docker-php-ext-install pdo pdo_mysql opcache zip \

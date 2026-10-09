@@ -813,7 +813,20 @@ $databases['default']['default'] = [
   'driver' => 'mysql',
   'prefix' => '',
   'collation' => 'utf8mb4_general_ci',
+  'init_commands' => [
+    'isolation_level' => 'SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED',
+  ],
 ];
+
+/**
+ * HTML5 client-side validation.
+ *
+ * Set explicitly to preserve the current behaviour before Drupal 12, where this
+ * setting will default to FALSE.
+ *
+ * @see https://www.drupal.org/node/3537128
+ */
+$settings['enable_html5_validation'] = TRUE;
 
 /**
  * Load local development override configuration, if available.
